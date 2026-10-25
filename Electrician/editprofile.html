@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - แก้ไขข้อมูลของฉัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/editprofile.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="role">ช่างไฟ</span>
+            <div class="menu">
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">เพิ่มเติม ▾</a>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="n-right">
+            <label for="st" class="status-top">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+            <div class="user">
+                <a href="./profile.html" class="a1">ว</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <a href="./profile.html" class="back-link">&larr; กลับโปรไฟล์</a>
+        <h1 class="page-title">แก้ไขข้อมูลของฉัน</h1>
+
+        <div class="form-grid">
+
+            <div class="card">
+                <h2 class="card-title">ข้อมูลส่วนตัว</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>ชื่อ-นามสกุล</label>
+                        <input type="text" value="วิชัย มานะกิจ">
+                    </div>
+                    <div class="form-group">
+                        <label>เบอร์โทร</label>
+                        <input type="text" value="089-123-4567">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>อีเมล</label>
+                    <input type="email" value="vichai@fix.co">
+                </div>
+
+                <div class="form-group">
+                    <label>แนะนำตัวสั้นๆ</label>
+                    <input type="text" value="ช่างไฟมืออาชีพ 8 ปี เน้นอธิบายให้ลูกค้าเข้าใจง่าย">
+                </div>
+
+                <div class="form-group">
+                    <label>พื้นที่รับงาน</label>
+                    <div class="area-tags">
+                        <span class="tag active">กรุงเทพฯ</span>
+                        <span class="tag active">นนทบุรี</span>
+                        <span class="tag">ปทุมธานี</span>
+                        <span class="tag">สมุทรปราการ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">บัญชีรับเงิน</h2>
+
+                <div class="form-group">
+                    <label>ธนาคาร</label>
+                    <input type="text" value="กสิกรไทย">
+                </div>
+
+                <div class="form-group">
+                    <label>เลขบัญชี</label>
+                    <input type="text" value="xxx-x-x4821">
+                </div>
+
+                <div class="form-group">
+                    <label>ชื่อบัญชี</label>
+                    <input type="text" value="วิชัย มานะกิจ">
+                </div>
+
+                <div class="form-actions">
+                    <a href="./profile.html" class="btn-primary">บันทึกข้อมูล</a>
+                    <a href="./profile.html" class="btn-outline">ยกเลิก</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+</html>

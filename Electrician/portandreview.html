@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานและรีวิว - VoltFix</title>
+    <link rel="stylesheet" href="css/portandreview.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-zap preview-icon">
+                        <path
+                            d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="role">ช่างไฟ</span>
+
+            <div class="menu">
+
+                <label for="st" class="status-top mobile-status">
+                    <span class="toggle"></span>
+                    <span class="st-on">พร้อมรับงาน</span>
+                    <span class="st-off">ไม่พร้อมรับงาน</span>
+                </label>
+
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <input type="checkbox" id="drop-toggle" class="hide">
+                    <label for="drop-toggle" class="dropbtn act">เพิ่มเติม ▾</label>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html" class="act-sub">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="n-right">
+
+            <a href="./chat.html" class="chat-icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="notification-dot"></span>
+            </a>
+
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user">ว</div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="user-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="user-email">vichai@fix.co</div>
+                    </div>
+                    <hr class="user-divider">
+                    <div class="user-menu-list">
+                        <a href="./profile.html" class="user-link">โปรไฟล์ของฉัน</a>
+                        <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="user-link logout-link">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>ผลงานและรีวิว</h1>
+            <p>สิ่งที่ลูกค้าเห็นในโปรไฟล์ของคุณ</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value"><span class="stat-star">★</span> 4.9</div>
+                <div class="stat-label">คะแนนเฉลี่ย</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">128</div>
+                <div class="stat-label">รีวิว</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">312</div>
+                <div class="stat-label">งานสำเร็จ</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">ตอบรับงาน</div>
+            </div>
+        </div>
+
+        <div class="action-button-container">
+            <a href="../Customer/p_tecnichain.html" class="btn-outline">ดูหน้าโปรไฟล์ที่ลูกค้าเห็น</a>
+        </div>
+
+        <div class="content-grid">
+
+            <aside class="card-panel">
+                <h2 class="panel-title">รีวิวล่าสุด</h2>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-user-info">
+                            <span class="review-name">คุณสมศรี</span>
+                            <span class="review-tag">ไฟดับทั้งบ้าน</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <div class="review-comment">มาตรงเวลา อธิบายเป็นภาษาช่างๆ ไม่เร่งรัด</div>
+                    <div class="review-date">1 สัปดาห์ก่อน</div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-user-info">
+                            <span class="review-name">คุณอนันต์</span>
+                            <span class="review-tag">เบรกเกอร์ตก</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <div class="review-comment">หาสาเหตุเจอเร็ว ราคาตรงกับใบเสนอ</div>
+                    <div class="review-date">3 สัปดาห์ก่อน</div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-user-info">
+                            <span class="review-name">คุณมาลี</span>
+                            <span class="review-tag">เดินสายไฟ</span>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                    <div class="review-comment">งานเรียบร้อย เก็บสายสวย</div>
+                    <div class="review-date">1 เดือนก่อน</div>
+                </div>
+            </aside>
+
+            <section class="card-panel">
+                <h2 class="panel-title">ผลงานของฉัน</h2>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work1.jpg" alt="ติดตั้งตู้ Consumer Unit" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">ติดตั้งตู้คอนซูเมอร์ยูนิต</span>
+                    </div>
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work2.jpg" alt="เดินท่อร้อยสายไฟ EMT" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">เดินท่อร้อยสายไฟ EMT</span>
+                    </div>
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work3.jpg" alt="ติดตั้งสวิตช์และเต้ารับกราวด์" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">ติดตั้งสวิตช์และเต้ารับ</span>
+                    </div>
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work4.jpg" alt="ซ่อมบำรุงตู้ควบคุมไฟฟ้า" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">ซ่อมบำรุงตู้ควบคุมไฟฟ้า</span>
+                    </div>
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work5.jpg" alt="ตรวจวัดระบบไฟด้วยมัลติมิเตอร์" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">ตรวจวัดระบบไฟและสายดิน</span>
+                    </div>
+                    <div class="portfolio-item" style="position:relative; overflow:hidden; padding:0; height:120px; border:1px solid #cbd5e1;">
+                        <img src="img/portfolio_work6.jpg" alt="แก้ไขสายไฟและเบรกเกอร์เมน" style="width:100%; height:100%; object-fit:cover; display:block;">
+                        <span style="position:absolute; bottom:0; left:0; right:0; background:rgba(15,23,42,0.75); color:#ffffff; font-size:12px; font-weight:600; padding:4px 8px; text-align:center;">แก้ไขสายไฟและเบรกเกอร์</span>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <span class="upload-label">เพิ่มรูปผลงาน</span>
+                    <div class="file-upload-wrapper">
+                        <input type="file" title="ไม่มีไฟล์ที่เลือก">
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

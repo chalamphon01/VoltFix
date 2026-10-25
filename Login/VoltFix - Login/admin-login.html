@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoltFix | เข้าสู่ระบบแอดมิน</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700;800&amp;display=swap">
+
+  <link rel="stylesheet" href="./css/admin-login.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <main class="auth-page">
+
+    <section class="auth-card">
+
+      <header class="brand">
+        <div class="brand-icon-slot">
+          <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+          <span class="brand-name">VoltFix</span>
+        </div>
+      </header>
+
+      <h1 class="title">ยินดีต้อนรับ</h1>
+      <p class="subtitle">เข้าสู่ระบบเพื่อจัดการระบบ VoltFix</p>
+
+      <nav class="role-tabs" aria-label="ประเภทผู้ใช้งาน">
+        <a class="role-tab " href="./customer-login.html">ลูกค้า</a>
+        <a class="role-tab " href="./technician-login.html">ช่างไฟ</a>
+        <a class="role-tab active" href="./admin-login.html">แอดมิน</a>
+      </nav>
+
+      <nav class="auth-tabs" aria-label="บัญชี">
+        <a class="auth-tab active" href="./admin-login.html">เข้าสู่ระบบ</a>
+        <a class="auth-tab" href="./admin-register.html">สมัครสมาชิก</a>
+      </nav>
+
+      <form action="../../Admin/dashboard.html">
+
+        <div class="form-group">
+          <label class="form-label" for="admin-login-id">อีเมลผู้ดูแลระบบ</label>
+          <input class="input" id="admin-login-id" type="text" placeholder="เช่น admin@voltfix.co"
+            autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="admin-login-password">รหัสผ่าน</label>
+          <input class="input" id="admin-login-password" type="password" placeholder="กรอกรหัสผ่านของคุณ"
+            autocomplete="current-password">
+        </div>
+
+        <div class="form-row">
+          <label class="remember"><input type="checkbox"> จำฉันไว้</label>
+          <span></span>
+        </div>
+
+        <button class="btn btn-blue" type="submit">เข้าสู่ระบบ</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

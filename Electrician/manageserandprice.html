@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการบริการและราคา - VoltFix</title>
+    <link rel="stylesheet" href="css/manageserandprice.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="badge-role">ช่างไฟ</span>
+
+            <div class="menu">
+
+                <label for="st" class="status-top mobile-status">
+                    <span class="toggle"></span>
+                    <span class="st-on">พร้อมรับงาน</span>
+                    <span class="st-off">ไม่พร้อมรับงาน</span>
+                </label>
+
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <input type="checkbox" id="drop-toggle" class="hide">
+                    <label for="drop-toggle" class="dropbtn act">เพิ่มเติม ▾</label>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html" class="act-sub">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="./chat.html" class="chat-icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="notification-dot"></span>
+            </a>
+
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user-avatar">ว</div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="user-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="user-email">vichai@fix.co</div>
+                    </div>
+                    <hr class="user-divider">
+                    <div class="user-menu-list">
+                        <a href="./profile.html" class="user-link">โปรไฟล์ของฉัน</a>
+                        <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="user-link logout-link">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="page-header">
+            <h1>จัดการบริการและราคา</h1>
+            <p>เปิด/ปิดบริการ และตั้งราคาเริ่มต้นของแต่ละงาน (หมวด ➔ บริการ ➔ ราคา)</p>
+        </div>
+
+        <div class="accordion-wrapper">
+
+            <div class="main-category">
+                <input type="checkbox" id="cat-main" class="acc-check">
+                <label for="cat-main" class="category-header main-header">
+                    <span class="category-title">บริการทั้งหมดของฉัน</span>
+                    <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </label>
+
+                <div class="content-wrapper main-content-wrapper">
+                    <div class="content-inner">
+
+                        <div class="accordion-category">
+                            <input type="checkbox" id="cat-2" class="acc-check">
+                            <label for="cat-2" class="category-header">
+                                <span class="category-title">ไฟดับและเบรกเกอร์</span>
+                                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </label>
+
+                            <div class="content-wrapper">
+                                <div class="content-inner">
+
+                                    <div class="sub-item">
+                                        <input type="checkbox" id="sub-2-1" class="sub-check">
+                                        <label for="sub-2-1" class="sub-header">
+                                            <span>ไฟดับทั้งบ้าน</span>
+                                            <svg class="sub-chevron" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </label>
+                                        <div class="content-wrapper">
+                                            <div class="content-inner">
+                                                <div class="sub-body">
+                                                    <div class="toggle-card">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="toggle-label">เปิดรับบริการนี้</span>
+                                                    </div>
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>ค่าแรงเริ่มต้น (฿)</label>
+                                                            <input type="text" value="400">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>ค่าเดินทาง (฿)</label>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-item">
+                                        <input type="checkbox" id="sub-2-2" class="sub-check">
+                                        <label for="sub-2-2" class="sub-header">
+                                            <span>เบรกเกอร์ตก</span>
+                                            <svg class="sub-chevron" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </label>
+                                        <div class="content-wrapper">
+                                            <div class="content-inner">
+                                                <div class="sub-body">
+                                                    <div class="toggle-card">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="toggle-label">เปิดรับบริการนี้</span>
+                                                    </div>
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>ค่าแรงเริ่มต้น (฿)</label>
+                                                            <input type="text" value="450">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>ค่าเดินทาง (฿)</label>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-category">
+                            <input type="checkbox" id="cat-3" class="acc-check">
+                            <label for="cat-3" class="category-header">
+                                <span class="category-title">เดินสายและติดตั้ง</span>
+                                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </label>
+
+                            <div class="content-wrapper">
+                                <div class="content-inner">
+
+                                    <div class="sub-item">
+                                        <input type="checkbox" id="sub-3-1" class="sub-check">
+                                        <label for="sub-3-1" class="sub-header">
+                                            <span>เดินสายไฟใหม่</span>
+                                            <svg class="sub-chevron" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </label>
+                                        <div class="content-wrapper">
+                                            <div class="content-inner">
+                                                <div class="sub-body">
+                                                    <div class="toggle-card">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="toggle-label">เปิดรับบริการนี้</span>
+                                                    </div>
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>ค่าแรงเริ่มต้น (฿)</label>
+                                                            <input type="text" value="800">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>ค่าเดินทาง (฿)</label>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="sub-item highlight-item">
+                                        <input type="checkbox" id="sub-3-2" class="sub-check">
+                                        <label for="sub-3-2" class="sub-header">
+                                            <span>ติดตั้งโคมและพัดลม</span>
+                                            <svg class="sub-chevron" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </label>
+                                        <div class="content-wrapper">
+                                            <div class="content-inner">
+                                                <div class="sub-body">
+                                                    <div class="toggle-card">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="toggle-label">เปิดรับบริการนี้</span>
+                                                    </div>
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>ค่าแรงเริ่มต้น (฿)</label>
+                                                            <input type="text" value="350">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>ค่าเดินทาง (฿)</label>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-category">
+                            <input type="checkbox" id="cat-4" class="acc-check">
+                            <label for="cat-4" class="category-header">
+                                <span class="category-title">ตรวจระบบไฟ</span>
+                                <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </label>
+
+                            <div class="content-wrapper">
+                                <div class="content-inner">
+
+                                    <div class="sub-item">
+                                        <input type="checkbox" id="sub-4-1" class="sub-check">
+                                        <label for="sub-4-1" class="sub-header">
+                                            <span>ตรวจความปลอดภัยทั้งบ้าน</span>
+                                            <svg class="sub-chevron" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </label>
+                                        <div class="content-wrapper">
+                                            <div class="content-inner">
+                                                <div class="sub-body">
+                                                    <div class="toggle-card">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="toggle-label">เปิดรับบริการนี้</span>
+                                                    </div>
+                                                    <div class="price-inputs">
+                                                        <div class="input-group">
+                                                            <label>ค่าแรงเริ่มต้น (฿)</label>
+                                                            <input type="text" value="600">
+                                                        </div>
+                                                        <div class="input-group">
+                                                            <label>ค่าเดินทาง (฿)</label>
+                                                            <input type="text" value="50">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn-primary">บันทึกบริการและราคา</button>
+
+    </main>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - ออกจากระบบ</title>
+    <link rel="stylesheet" href="css_user/logout.css">
+    <link rel="stylesheet" href="css_user/customer_theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            if (nav) nav.classList.toggle("open");
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <div class="card-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bolt light"></i>
+                </div>
+                <span class="logo-text">VoltFix</span>
+            </div>
+            <h1 class="title">ยินดีต้อนรับ</h1>
+            <p class="subtitle">เข้าสู่ระบบเพื่อใช้งาน VoltFix</p>
+        </div>
+
+        <div class="role-selector">
+            <button class="role-btn active">ลูกค้า</button>
+            <button type="button" class="role-btn" onclick="window.location.href="../Login/VoltFix%20-%20Login/technician-login.html"">ช่างไฟ</button>
+            <button type="button" class="role-btn" onclick="window.location.href="../Login/VoltFix%20-%20Login/admin-login.html"">แอดมิน</button>
+        </div>
+
+        <div class="auth-tabs">
+            <button type="button" class="tab-btn active" onclick="window.location.href="../Login/VoltFix%20-%20Login/customer-login.html"">เข้าสู่ระบบ</button>
+            <button type="button" class="tab-btn" onclick="window.location.href="../Login/VoltFix%20-%20Login/customer-register.html"">สมัครสมาชิก</button>
+        </div>
+
+        <form class="login-form" action="index.html">
+            <div class="form-group">
+                <label for="email">อีเมลหรือเบอร์โทร</label>
+                <input type="text" id="email" placeholder="piya@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox" checked>
+                    <span>จำฉันไว้</span>
+                </label>
+                <a href="../Login/VoltFix%20-%20Login/customer-forgot-password.html" class="forgot-password">ลืมรหัสผ่าน?</a>
+            </div>
+
+            <a href="./index.html" class="submit-btn">เข้าสู่ระบบ</a>
+
+        </form>
+    </div>
+</body>
+
+</html>

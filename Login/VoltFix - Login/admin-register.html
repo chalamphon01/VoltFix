@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoltFix | สมัครสมาชิกแอดมิน</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700;800&amp;display=swap">
+
+  <link rel="stylesheet" href="./css/admin-register.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <main class="auth-page">
+
+    <section class="auth-card">
+
+      <header class="brand">
+        <div class="brand-icon-slot">
+          <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+          <span class="brand-name">VoltFix</span>
+        </div>
+      </header>
+
+      <h1 class="title">สร้างบัญชีผู้ดูแล</h1>
+      <p class="subtitle">ลงทะเบียนสำหรับเจ้าหน้าที่ดูแลระบบ VoltFix</p>
+
+      <nav class="role-tabs" aria-label="ประเภทผู้ใช้งาน">
+        <a class="role-tab" href="./customer-register.html">ลูกค้า</a>
+        <a class="role-tab" href="./technician-register.html">ช่างไฟ</a>
+        <a class="role-tab active" href="./admin-register.html">แอดมิน</a>
+      </nav>
+
+      <nav class="auth-tabs" aria-label="บัญชี">
+        <a class="auth-tab" href="./admin-login.html">เข้าสู่ระบบ</a>
+        <a class="auth-tab active" href="./admin-register.html">สมัครสมาชิก</a>
+      </nav>
+
+      <form action="../../Admin/dashboard.html">
+
+        <div class="form-group">
+          <label class="form-label" for="admin-name">ชื่อ-นามสกุล</label>
+          <input class="input" id="admin-name" type="text" placeholder="เช่น ภานุวัฒน์ วงศ์สวัสดิ์" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="admin-email">อีเมลผู้ดูแลระบบ</label>
+          <input class="input" id="admin-email" type="email" placeholder="เช่น admin@voltfix.co" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="admin-password">ตั้งรหัสผ่าน</label>
+          <input class="input" id="admin-password" type="password" placeholder="อย่างน้อย 8 ตัวอักษร" autocomplete="new-password">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="admin-secret">รหัสความปลอดภัยองค์กร (Admin Key)</label>
+          <input class="input" id="admin-secret" type="password" placeholder="กรอกรหัสลับองค์กรเพื่อยืนยันสิทธิ์">
+        </div>
+
+        <button class="btn btn-blue" type="submit">สร้างบัญชีผู้ดูแลระบบ</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

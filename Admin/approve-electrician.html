@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Approve Electrician KYC</title>
+
+    <link rel="stylesheet" href="css/approve-electrician.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>อนุมัติช่าง (KYC)</h1>
+                <p class="subtitle">ตรวจสอบเอกสารและอนุมัติผู้สมัครเป็นช่างไฟก่อนให้เริ่มรับงาน</p>
+            </div>
+
+            <div class="stats-grid-3">
+                <div class="stat-card">
+                    <b class="stat-value">8</b>
+                    <span class="stat-label">รอตรวจสอบ</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">312</b>
+                    <span class="stat-label">อนุมัติแล้วทั้งหมด</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">1-2 วัน</b>
+                    <span class="stat-label">เวลาตรวจสอบเฉลี่ย</span>
+                </div>
+            </div>
+
+            <div class="kyc-section">
+                <h2 class="section-title">รอตรวจสอบ</h2>
+
+                <div class="kyc-card">
+                    <div class="kyc-header">
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <img src="img/kyc_portrait1.jpg" alt="ธนภัทร จิตดี" style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid #e2e8f0;">
+                            <div>
+                                <h3>ธนภัทร จิตดี</h3>
+                                <p>ช่างไฟฟ้าภายในอาคาร ระดับ 2</p>
+                            </div>
+                        </div>
+                        <span class="badge-pending">รอตรวจสอบ</span>
+                    </div>
+
+                    <div class="kyc-docs">
+                        <div class="doc-item">
+                            <span>วุฒิ / ใบรับรอง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>บัตรประชาชน</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>รูปถ่ายหน้าตรง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-docs-previews" style="display:flex; gap:10px; margin-bottom:16px;">
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_cert.jpg" alt="วุฒิ / ใบรับรอง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">ใบรับรอง</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_id_card.jpg" alt="บัตรประชาชน" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">บัตร ปชช.</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_portrait1.jpg" alt="รูปถ่ายหน้าตรง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">รูปหน้าตรง</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-actions">
+                        <button type="button" class="btn-outline-full">ดูเอกสารทั้งหมด</button>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn-reject">ปฏิเสธ</button>
+                            <button type="button" class="btn-approve">อนุมัติ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kyc-card">
+                    <div class="kyc-header">
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <img src="img/kyc_portrait2.jpg" alt="อนุชา แสงทอง" style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid #e2e8f0;">
+                            <div>
+                                <h3>อนุชา แสงทอง</h3>
+                                <p>วุฒิ ปวส. ไฟฟ้ากำลัง</p>
+                            </div>
+                        </div>
+                        <span class="badge-pending">รอตรวจสอบ</span>
+                    </div>
+
+                    <div class="kyc-docs">
+                        <div class="doc-item">
+                            <span>วุฒิ / ใบรับรอง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>บัตรประชาชน</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>รูปถ่ายหน้าตรง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-docs-previews" style="display:flex; gap:10px; margin-bottom:16px;">
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_cert.jpg" alt="วุฒิ / ใบรับรอง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">ใบรับรอง</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_id_card.jpg" alt="บัตรประชาชน" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">บัตร ปชช.</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_portrait2.jpg" alt="รูปถ่ายหน้าตรง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">รูปหน้าตรง</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-actions">
+                        <button type="button" class="btn-outline-full">ดูเอกสารทั้งหมด</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn-reject">ปฏิเสธ</button>
+                            <button type="button" class="btn-approve">อนุมัติ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kyc-card">
+                    <div class="kyc-header">
+                        <div style="display:flex; align-items:center; gap:12px;">
+                            <img src="img/kyc_portrait3.jpg" alt="กมล วงษ์ดี" style="width:48px; height:48px; border-radius:50%; object-fit:cover; border:2px solid #e2e8f0;">
+                            <div>
+                                <h3>กมล วงษ์ดี</h3>
+                                <p>ช่างไฟฟ้าภายในอาคาร ระดับ 1</p>
+                            </div>
+                        </div>
+                        <span class="badge-pending">รอตรวจสอบ</span>
+                    </div>
+
+                    <div class="kyc-docs">
+                        <div class="doc-item">
+                            <span>วุฒิ / ใบรับรอง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>บัตรประชาชน</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                        <div class="doc-item">
+                            <span>รูปถ่ายหน้าตรง</span>
+                            <span class="doc-status">ตรวจสอบแล้ว</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-docs-previews" style="display:flex; gap:10px; margin-bottom:16px;">
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_cert.jpg" alt="วุฒิ / ใบรับรอง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">ใบรับรอง</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_id_card.jpg" alt="บัตรประชาชน" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">บัตร ปชช.</span>
+                        </div>
+                        <div style="flex:1; text-align:center;">
+                            <div style="border-radius:8px; overflow:hidden; border:1px solid #e2e8f0; height:60px; background:#f8fafc;">
+                                <img src="img/kyc_portrait3.jpg" alt="รูปถ่ายหน้าตรง" style="width:100%; height:100%; object-fit:cover; display:block;">
+                            </div>
+                            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">รูปหน้าตรง</span>
+                        </div>
+                    </div>
+
+                    <div class="kyc-actions">
+                        <button type="button" class="btn-outline-full">ดูเอกสารทั้งหมด</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn-reject">ปฏิเสธ</button>
+                            <button type="button" class="btn-approve">อนุมัติ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

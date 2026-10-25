@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Job Detail#VF-0888</title>
+
+    <link rel="stylesheet" href="css/job-detail.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+            <a href="./follow-work.html" class="back-link">← กลับติดตามงาน</a>
+
+            <div class="job-header-section">
+                <div class="status-tags">
+                    <span class="badge badge-waiting">รอช่างรับงาน</span>
+                    <span class="job-id-text">#VF-0888</span>
+                </div>
+                <h1>ไฟฟ้าช็อตปลั๊กผนัง</h1>
+            </div>
+
+            <div class="job-detail-grid">
+
+                <div class="card timeline-card">
+                    <h2>ไทม์ไลน์งาน</h2>
+
+                    <ul class="timeline-list">
+                        <li class="timeline-item done">
+                            <div class="circle">✓</div>
+                            <span class="text">ส่งคำขอแล้ว</span>
+                        </li>
+                        <li class="timeline-item done">
+                            <div class="circle">✓</div>
+                            <span class="text">แจ้งช่างที่ว่าง 6 คนแล้ว</span>
+                        </li>
+                        <li class="timeline-item current">
+                            <div class="circle">3</div>
+                            <span class="text">รอช่างกดรับงาน</span>
+                        </li>
+                        <li class="timeline-item todo">
+                            <div class="circle">4</div>
+                            <span class="text">ยืนยันใบเสนอราคา</span>
+                        </li>
+                        <li class="timeline-item todo">
+                            <div class="circle">5</div>
+                            <span class="text">ซ่อม</span>
+                        </li>
+                        <li class="timeline-item todo">
+                            <div class="circle">6</div>
+                            <span class="text">จ่ายเงินและรีวิว</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="right-column">
+
+                    <div class="card contract-card">
+                        <h2>คู่สัญญา</h2>
+                        <div class="info-row"><span class="label">ลูกค้า</span><span class="value">วรรณา ต.</span></div>
+                        <div class="info-row"><span class="label">อีเมลลูกค้า</span><span
+                                class="value">wanna@email.com</span></div>
+                        <div class="info-row"><span class="label">ช่าง</span><span class="value">ยังไม่มีช่างรับ</span>
+                        </div>
+                        <div class="info-row"><span class="label">อีเมลช่าง</span><span class="value">—</span></div>
+                    </div>
+
+                    <div class="card finance-card">
+                        <h2>การเงิน</h2>
+                        <div class="info-row"><span class="label">ค่าแรง</span><span class="value">—</span></div>
+                        <div class="info-row"><span class="label">อุปกรณ์+เดินทาง</span><span class="value">—</span>
+                        </div>
+                        <div class="info-row"><span class="label">ค่าคอมมิชชั่น</span><span class="value">—</span></div>
+                        <div class="info-row"><span class="label">สถานะชำระเงิน</span><span
+                                class="value">ยังไม่เริ่ม</span></div>
+                    </div>
+
+                    <div class="card actions-card">
+                        <h2>การดำเนินการของแอดมิน</h2>
+
+                        <div class="btn-pair">
+                            <a href="chat-view-1.html" class="btn-contact" style="display:inline-block; text-align:center; text-decoration:none;">ติดต่อลูกค้าและช่าง</a>
+                            <a href="disputes.html" class="btn-cancel" style="display:inline-block; text-align:center; text-decoration:none;">เปิดข้อพิพาท/ยกเลิก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

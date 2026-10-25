@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Notifications</title>
+
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <a href="dashboard.html" class="back-link">กลับภาพรวมระบบ</a>
+
+            <div class="notification-header-row">
+                <div class="page-title">
+                    <h1>การแจ้งเตือน</h1>
+                    <p class="subtitle">
+                        แจ้งเตือนสำหรับแอดมินโดยเฉพาะ เช่น รายการรอดำเนินการ ไม่ใช่หน้าที่ใช้ส่งประกาศ
+                        (ไปที่ <a href="annoucements.html">ประกาศและแจ้งเตือน</a> แทนถ้าต้องการส่งประกาศ)
+                    </p>
+                </div>
+                <button type="button" class="btn-mark-all">อ่านทั้งหมดแล้ว</button>
+            </div>
+
+            <div class="filters">
+                <button type="button" class="filter-btn active">ทั้งหมด</button>
+                <button type="button" class="filter-btn">อนุมัติช่าง</button>
+                <button type="button" class="filter-btn">ข้อพิพาท</button>
+                <button type="button" class="filter-btn">การเงิน</button>
+                <button type="button" class="filter-btn">งาน</button>
+                <button type="button" class="filter-btn">ระบบ</button>
+            </div>
+
+            <div class="notification-card">
+
+                <ul class="notification-list">
+
+                    <li class="notification-item unread">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-unread"></span>
+                            <div class="notif-text">
+                                <b>มีช่างสมัครใหม่รอตรวจสอบ</b>
+                                <p>ธนภัทร จิตดี ส่งเอกสารครบแล้ว</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">5 นาที</span>
+                    </li>
+
+                    <li class="notification-item unread">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-unread"></span>
+                            <div class="notif-text">
+                                <b>ข้อพิพาทใหม่ #DIS-0446</b>
+                                <p>ลูกค้าปิยะ สุขใจ แจ้งปัญหางานไม่เรียบร้อย</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">15 นาที</span>
+                    </li>
+
+                    <li class="notification-item unread">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-unread"></span>
+                            <div class="notif-text">
+                                <b>คำขอถอนเงินใหม่ 3 รายการ</b>
+                                <p>รอการอนุมัติจากคุณ</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">22 นาที</span>
+                    </li>
+
+                    <li class="notification-item read">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-read-neutral"></span>
+                            <div class="notif-text">
+                                <b>งานฉุกเฉินรอช่างรับงาน</b>
+                                <p>งาน #VF-0888 ยังไม่มีช่างรับเกิน 20 นาที</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">1 ชั่วโมงก่อน</span>
+                    </li>
+
+                    <li class="notification-item read">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-read-neutral"></span>
+                            <div class="notif-text">
+                                <b>อัปเดตอัตราคอมมิชชั่นสำเร็จ</b>
+                                <p>เปลี่ยนเป็น 15% มีผลแล้ว</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">เมื่อวาน</span>
+                    </li>
+
+                    <li class="notification-item read">
+                        <div class="notif-content">
+                            <span class="notif-dot dot-read-neutral"></span>
+                            <div class="notif-text">
+                                <b>มีผู้ใช้ใหม่สมัคร 12 คน</b>
+                                <p>สรุปยอดผู้ใช้ใหม่ประจำวัน</p>
+                            </div>
+                        </div>
+                        <span class="notif-time">เมื่อวาน</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

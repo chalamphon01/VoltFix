@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Finance</title>
+
+    <link rel="stylesheet" href="css/finance.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>การเงินและค่าคอมมิชชั่น</h1>
+                <p class="subtitle">ภาพรวมรายได้แพลตฟอร์ม อัตราคอมมิชชั่น และคำขอถอนเงินของช่าง</p>
+            </div>
+
+            <div class="stats-grid-4">
+                <div class="stat-card">
+                    <b class="stat-value">฿128,450</b>
+                    <span class="stat-label">รายได้รวมวันนี้</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">฿19,267</b>
+                    <span class="stat-label">ค่าคอมมิชชั่นวันนี้</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">15%</b>
+                    <span class="stat-label">อัตราคอมมิชชั่นปัจจุบัน</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">12</b>
+                    <span class="stat-label">คำขอถอนเงินรอดำเนินการ</span>
+                </div>
+            </div>
+
+            <div class="finance-middle-grid">
+
+                <div class="finance-card">
+                    <h2>ตั้งค่าอัตราค่าคอมมิชชั่น</h2>
+                    <div class="form-group">
+                        <label for="comm-rate">อัตราคอมมิชชั่น (%)</label>
+                        <input type="number" id="comm-rate" value="15">
+                    </div>
+                    <p class="helper-text">หักจากค่าแรงของช่างเท่านั้น ไม่หักค่าอุปกรณ์และค่าเดินทาง</p>
+                    <button type="button" class="btn-save">บันทึกอัตราใหม่</button>
+                </div>
+
+                <div class="finance-card">
+                    <h2>สรุปรายเดือน</h2>
+
+                    <div class="summary-list">
+                        <div class="summary-item">
+                            <span>รายได้รวมเดือนนี้</span>
+                            <b>฿1,842,600</b>
+                        </div>
+                        <div class="summary-item">
+                            <span>ค่าคอมมิชชั่นสุทธิ</span>
+                            <b>฿276,390</b>
+                        </div>
+                        <div class="summary-item">
+                            <span>จ่ายให้ช่างแล้ว</span>
+                            <b>฿1,540,200</b>
+                        </div>
+                        <div class="summary-item">
+                            <span>รอโอน</span>
+                            <b>฿26,010</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="withdraw-section">
+                <h2 class="section-title">คำขอถอนเงินของช่าง</h2>
+
+                <div class="table-card">
+
+                    <table class="withdraw-table">
+                        <thead>
+                            <tr>
+                                <th>ช่าง</th>
+                                <th>จำนวน</th>
+                                <th>บัญชี</th>
+                                <th>สถานะ</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tech-name">วิชัย มานะกิจ</td>
+                                <td class="amount">฿1,500</td>
+                                <td class="bank-info">กสิกรไทย xxx-x-x4821</td>
+                                <td><span class="badge-waiting">รออนุมัติ</span></td>
+                                <td class="action-buttons">
+                                    <button type="button" class="btn-approve-transfer">อนุมัติโอน</button>
+                                    <button type="button" class="btn-reject-transfer">ปฏิเสธ</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tech-name">สมชาย อินทร์ดี</td>
+                                <td class="amount">฿980</td>
+                                <td class="bank-info">ไทยพาณิชย์ xxx-x-x1092</td>
+                                <td><span class="badge-waiting">รออนุมัติ</span></td>
+                                <td class="action-buttons">
+                                    <button type="button" class="btn-approve-transfer">อนุมัติโอน</button>
+                                    <button type="button" class="btn-reject-transfer">ปฏิเสธ</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tech-name">ประเสริฐ ทำดี</td>
+                                <td class="amount">฿2,200</td>
+                                <td class="bank-info">กรุงไทย xxx-x-x7734</td>
+                                <td><span class="badge-waiting">รออนุมัติ</span></td>
+                                <td class="action-buttons">
+                                    <button type="button" class="btn-approve-transfer">อนุมัติโอน</button>
+                                    <button type="button" class="btn-reject-transfer">ปฏิเสธ</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

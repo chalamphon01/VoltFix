@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - เครื่องมือคำนวณวิศวกรรมไฟฟ้า &amp; ออกใบเสนอราคา (Engineering Calculator)</title>
+    <link rel="stylesheet" href="css/electrician_theme.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="role">ช่างไฟ</span>
+
+            <div class="menu">
+                <label for="st" class="status-top mobile-status">
+                    <span class="toggle"></span>
+                    <span class="st-on">พร้อมรับงาน</span>
+                    <span class="st-off">ไม่พร้อมรับงาน</span>
+                </label>
+
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn act">เพิ่มเติม ▾</a>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" class="act-sub" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="n-right">
+            <a href="./chat.html" class="chat-icon-btn" aria-label="ห้องแชท">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="chat-noti"></span>
+            </a>
+
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user">
+                    <span class="a1">ว</span>
+                </div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="u-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="u-email">vichai@fix.co</div>
+                    </div>
+                    <div class="u-menu">
+                        <a href="./profile.html">โปรไฟล์ของฉัน</a>
+                        <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="logout-btn">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="calc-container">
+
+        <header class="calc-header">
+            <div class="calc-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                ฟังก์ชันวิศวกรรมไฟฟ้าขั้นสูง (Professional Engineering Suite)
+            </div>
+            <h1 class="calc-title">เครื่องมือคำนวณโหลดระบบไฟฟ้า &amp; <span>สร้างใบเสนอราคาอัจฉริยะ</span></h1>
+            <p class="calc-subtitle">
+                คำนวณกระแสไฟฟ้าพิกัด ($I$), คัดเลือกขนาดเบรกเกอร์ (MCB/MCCB), คำนวณขนาดสายไฟทองแดงตามมาตรฐาน วสท., ตรวจสอบแรงดันตก (% Voltage Drop), พร้อมระบบ Dynamic Quotation และกระดานเซ็นชื่อดิจิทัล
+            </p>
+        </header>
+
+        <div class="preset-section">
+            <div class="preset-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                พรีเซ็ตเครื่องใช้ไฟฟ้าที่พบบ่อย (กดเพื่อโหลดค่าอัตโนมัติ):
+            </div>
+            <div class="preset-group">
+                <button type="button" class="btn-preset" data-watts="1800" data-phase="1" data-length="15" data-name="เครื่องปรับอากาศ 18,000 BTU">
+                    ❄️ แอร์ 18,000 BTU (1,800W)
+                </button>
+                <button type="button" class="btn-preset" data-watts="4500" data-phase="1" data-length="10" data-name="เครื่องทำน้ำอุ่น">
+                    🚿 เครื่องทำน้ำอุ่น (4,500W)
+                </button>
+                <button type="button" class="btn-preset" data-watts="3000" data-phase="1" data-length="12" data-name="เตาแม่เหล็กไฟฟ้า">
+                    🍳 เตาไฟฟ้า Induction (3,000W)
+                </button>
+                <button type="button" class="btn-preset" data-watts="750" data-phase="1" data-length="25" data-name="ปั๊มน้ำบ้านเดี่ยว">
+                    💧 ปั๊มน้ำบ้านเดี่ยว (750W)
+                </button>
+                <button type="button" class="btn-preset" data-watts="7500" data-phase="3" data-length="40" data-name="มอเตอร์โรงงาน 3 เฟส (10 HP)">
+                    ⚡ มอเตอร์ 3 เฟส 10HP (7,500W)
+                </button>
+            </div>
+        </div>
+
+        <div class="calc-grid">
+
+            <div class="calc-panel">
+                <h2 class="panel-head">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                    1. ป้อนพารามิเตอร์ทางไฟฟ้า (Electrical Inputs)
+                </h2>
+
+                <div class="form-group">
+                    <label class="form-label">ระบบไฟฟ้า (Phase System)</label>
+                    <div class="phase-selector">
+                        <div class="phase-btn active" id="btnPhase1" data-phase="1">1 เฟส (220V ทั่วไป)</div>
+                        <div class="phase-btn" id="btnPhase3" data-phase="3">3 เฟส (380V อุตสาหกรรม)</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputWatts" class="form-label">กำลังไฟฟ้ารวม (Total Power ในหน่วย Watt)</label>
+                    <input type="number" id="inputWatts" class="form-control" value="4500" min="100" max="100000" step="50">
+                    <span style="font-size: 12px; color: #64748B;">เช่น แอร์ 1,800W, เครื่องทำน้ำอุ่น 4,500W</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputLength" class="form-label">ระยะทางเดินสายไฟจากตู้ควบคุม (เมตร)</label>
+                    <input type="number" id="inputLength" class="form-control" value="20" min="1" max="500">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPf" class="form-label">ตัวประกอบกำลัง (Power Factor: cos θ)</label>
+                    <input type="number" id="inputPf" class="form-control" value="0.85" min="0.5" max="1.0" step="0.05">
+                </div>
+
+                <div class="result-box-highlight">
+                    <div style="font-size: 13px; font-weight: 700; color: #92400E; text-transform: uppercase;">
+                        ⚡ ผลลัพธ์การคำนวณวิศวกรรมไฟฟ้า (มาตรฐาน วสท.)
+                    </div>
+
+                    <div class="result-stat-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">กระแสโหลดพิกัด ($I$)</div>
+                            <div class="stat-value" id="resCurrent">24.06 A</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">กระแสออกแบบ ($I_{design} \times 1.25$)</div>
+                            <div class="stat-value" id="resDesignCurrent">30.08 A</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">ขนาดเบรกเกอร์แนะนำ (MCB)</div>
+                            <div class="stat-value highlight" id="resBreaker">32 A</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">ขนาดสายไฟ THW ขั้นต่ำ</div>
+                            <div class="stat-value highlight" id="resWire">6.0 sq.mm.</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed rgba(245, 158, 11, 0.4); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                        <div>
+                            <div style="font-size: 12px; color: #64748B;">แรงดันตก (% Voltage Drop):</div>
+                            <strong style="font-size: 16px; color: #0F172A;" id="resVDrop">1.28% (2.81 V)</strong>
+                        </div>
+                        <span class="vdrop-badge vdrop-ok" id="badgeVDrop">✓ แรงดันตกปกติ (&lt; 3%)</span>
+                    </div>
+                </div>
+
+                <button type="button" id="btnInjectQuote" class="btn-calc-inject" style="width: 100%; justify-content: center;">
+                    ⚡ นำค่าที่คำนวณได้ใส่ลงในใบเสนอราคาทันที
+                </button>
+            </div>
+
+            <div class="calc-panel">
+                <h2 class="panel-head">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    2. ออกใบเสนอราคาแบบ Dynamic (Live Quotation Engine)
+                </h2>
+
+                <div class="quote-table-wrap">
+                    <table class="quote-dynamic-table">
+                        <thead>
+                            <tr>
+                                <th>รายการ</th>
+                                <th style="width: 90px; text-align: center;">จำนวน</th>
+                                <th style="width: 80px; text-align: right;">ราคา</th>
+                                <th style="width: 36px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="quoteTableBody">
+                            <!-- Rendered dynamically by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="add-custom-box">
+                    <strong style="font-size: 13.5px; color: #0F172A;">+ เพิ่มรายการเอง (Custom Item)</strong>
+                    <div class="add-custom-row">
+                        <input type="text" id="custItemName" class="form-control" placeholder="ชื่อรายการ เช่น เบรกเกอร์ RCBO">
+                        <select id="custItemCategory" class="form-control">
+                            <option value="material">อุปกรณ์</option>
+                            <option value="labor">ค่าแรง</option>
+                            <option value="service">บริการ</option>
+                        </select>
+                        <input type="number" id="custItemPrice" class="form-control" placeholder="ราคา ฿" min="10" step="10">
+                        <button type="button" id="btnAddCustomItem" class="btn-add-item">+ เพิ่ม</button>
+                    </div>
+                </div>
+
+                <div style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13.5px;">
+                        <span style="color: #64748B;">ค่าแรงรวม:</span>
+                        <strong id="dispLabor">฿450</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13.5px;">
+                        <span style="color: #64748B;">ค่าอุปกรณ์รวม:</span>
+                        <strong id="dispMaterial">฿150</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13.5px;">
+                        <span style="color: #64748B;">ค่าบริการ/เดินทาง:</span>
+                        <strong id="dispService">฿50</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13.5px; border-bottom: 1px dashed #CBD5E1; padding-bottom: 8px;">
+                        <span style="color: #64748B;">ภาษีมูลค่าเพิ่ม (VAT 7%):</span>
+                        <span id="dispVat">฿45.50</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 15px; font-weight: 800; color: #0F172A;">ยอดรวมสุทธิที่เรียกเก็บ:</span>
+                        <strong style="font-size: 22px; font-weight: 900; color: #D97706;" id="dispGrandTotal">฿695.50</strong>
+                    </div>
+                    <div style="font-size: 12px; color: #059669; background: #ECFDF5; padding: 6px 10px; border-radius: 6px; border: 1px solid #A7F3D0;">
+                        💰 ช่างไฟได้รับสุทธิ: <strong id="dispPayout">฿628.00</strong> (หักคอมมิชชัน 15% จากค่าแรงเท่านั้น)
+                    </div>
+                </div>
+
+                <div class="sig-canvas-container">
+                    <div class="sig-tools">
+                        <strong style="font-size: 13px; color: #334155;">✍️ ลายมือชื่อช่างไฟฟ้าดิจิทัล (เซ็นชื่อในช่องนี้):</strong>
+                        <button type="button" id="btnClearSig" class="btn-sig-clear">ล้างลายเซ็น</button>
+                    </div>
+                    <canvas id="sigCanvas" class="sig-canvas"></canvas>
+                </div>
+
+                <div class="calc-action-row">
+                    <button type="button" id="btnPrintQuote" class="btn-calc-print" style="flex: 1; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                        พิมพ์ / ออกใบเสนอราคา (PDF)
+                    </button>
+                    <a href="./setoff.html" class="btn-calc-inject" style="flex: 1; justify-content: center; text-decoration: none;">
+                        บันทึก &amp; ไปที่งานที่กำลังทำ →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Core Electrician Module -->
+    <script src="js/electrician-core.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentPhase = 1;
+            let currentCalculatedItem = null;
+
+            // 1. Setup Signature Pad
+            const sigCanvas = document.getElementById('sigCanvas');
+            const sigPad = new VoltFixElectrician.SignaturePad(sigCanvas);
+            document.getElementById('btnClearSig').addEventListener('click', () => sigPad.clear());
+
+            // 2. Setup Phase Selector
+            const btnP1 = document.getElementById('btnPhase1');
+            const btnP3 = document.getElementById('btnPhase3');
+
+            btnP1.addEventListener('click', () => {
+                currentPhase = 1;
+                btnP1.classList.add('active');
+                btnP3.classList.remove('active');
+                runElectricalCalculation();
+            });
+
+            btnP3.addEventListener('click', () => {
+                currentPhase = 3;
+                btnP3.classList.add('active');
+                btnP1.classList.remove('active');
+                runElectricalCalculation();
+            });
+
+            // 3. Calculation Inputs
+            const inputWatts = document.getElementById('inputWatts');
+            const inputLength = document.getElementById('inputLength');
+            const inputPf = document.getElementById('inputPf');
+
+            function runElectricalCalculation() {
+                const watts = parseFloat(inputWatts.value) || 0;
+                const length = parseFloat(inputLength.value) || 0;
+                const pf = parseFloat(inputPf.value) || 0.85;
+
+                const result = VoltFixElectrician.calculateElectricalSizing({
+                    watts: watts,
+                    phase: currentPhase,
+                    powerFactor: pf,
+                    lengthMeters: length
+                });
+
+                document.getElementById('resCurrent').textContent = `${result.nominalCurrent} A`;
+                document.getElementById('resDesignCurrent').textContent = `${result.designCurrent} A`;
+                document.getElementById('resBreaker').textContent = `${result.recommendedBreaker} A`;
+                document.getElementById('resWire').textContent = `${result.recommendedWireSize} sq.mm.`;
+                document.getElementById('resVDrop').textContent = `${result.voltageDropPercent}% (${result.voltageDropVolt} V)`;
+
+                const badge = document.getElementById('badgeVDrop');
+                if (result.isOverDrop) {
+                    badge.className = 'vdrop-badge vdrop-warn';
+                    badge.textContent = `⚠️ แรงดันตกเกิน 3% (ปรับสายเป็น ${result.recommendedWireSize} sq.mm.)`;
+                } else {
+                    badge.className = 'vdrop-badge vdrop-ok';
+                    badge.textContent = '✓ แรงดันตกปกติ (< 3%)';
+                }
+
+                currentCalculatedItem = {
+                    name: `สายไฟ THW ${result.recommendedWireSize} sq.mm. + เบรกเกอร์ ${result.recommendedBreaker}A (${currentPhase} เฟส)`,
+                    price: result.recommendedBreaker * 15 + result.recommendedWireSize * 25,
+                    category: 'material'
+                };
+            }
+
+            [inputWatts, inputLength, inputPf].forEach(input => {
+                input.addEventListener('input', runElectricalCalculation);
+            });
+
+            // 4. Presets
+            document.querySelectorAll('.btn-preset').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const w = btn.getAttribute('data-watts');
+                    const ph = parseInt(btn.getAttribute('data-phase'), 10);
+                    const len = btn.getAttribute('data-length');
+
+                    inputWatts.value = w;
+                    inputLength.value = len;
+
+                    if (ph === 3) {
+                        btnP3.click();
+                    } else {
+                        btnP1.click();
+                    }
+                    runElectricalCalculation();
+                });
+            });
+
+            // 5. Inject calculated item to Quotation
+            document.getElementById('btnInjectQuote').addEventListener('click', () => {
+                if (currentCalculatedItem) {
+                    VoltFixElectrician.addQuotationItem(
+                        currentCalculatedItem.name,
+                        currentCalculatedItem.category,
+                        currentCalculatedItem.price,
+                        1
+                    );
+                    alert(`เพิ่ม "${currentCalculatedItem.name}" เข้าสู่ใบเสนอราคาเรียบร้อยแล้ว!`);
+                }
+            });
+
+            // 6. Quotation Engine UI Render
+            const quoteTableBody = document.getElementById('quoteTableBody');
+
+            function renderQuotationTable(items, totals) {
+                quoteTableBody.innerHTML = '';
+                items.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>
+                            <strong>${item.name}</strong>
+                            <div style="font-size:11px; color:#64748B;">${item.category === 'labor' ? 'ค่าแรง' : item.category === 'material' ? 'อุปกรณ์' : 'บริการ'}</div>
+                        </td>
+                        <td style="text-align:center;">
+                            <div class="qty-control">
+                                <button type="button" class="qty-btn btn-minus" data-id="${item.id}">-</button>
+                                <span class="qty-num">${item.qty}</span>
+                                <button type="button" class="qty-btn btn-plus" data-id="${item.id}">+</button>
+                            </div>
+                        </td>
+                        <td style="text-align:right; font-weight:700;">฿${(item.price * item.qty).toLocaleString()}</td>
+                        <td style="text-align:center;">
+                            ${item.editable ? `<button type="button" class="btn-del-item" data-id="${item.id}" title="ลบรายการ">✕</button>` : ''}
+                        </td>
+                    `;
+                    quoteTableBody.appendChild(tr);
+                });
+
+                // Attach Table Button Events
+                quoteTableBody.querySelectorAll('.btn-plus').forEach(b => {
+                    b.addEventListener('click', () => {
+                        const id = b.getAttribute('data-id');
+                        const item = items.find(i => i.id === id);
+                        if (item) VoltFixElectrician.updateItemQty(id, item.qty + 1);
+                    });
+                });
+
+                quoteTableBody.querySelectorAll('.btn-minus').forEach(b => {
+                    b.addEventListener('click', () => {
+                        const id = b.getAttribute('data-id');
+                        const item = items.find(i => i.id === id);
+                        if (item && item.qty > 1) VoltFixElectrician.updateItemQty(id, item.qty - 1);
+                    });
+                });
+
+                quoteTableBody.querySelectorAll('.btn-del-item').forEach(b => {
+                    b.addEventListener('click', () => {
+                        const id = b.getAttribute('data-id');
+                        VoltFixElectrician.removeQuotationItem(id);
+                    });
+                });
+
+                // Update summary texts
+                document.getElementById('dispLabor').textContent = `฿${totals.laborTotal.toLocaleString()}`;
+                document.getElementById('dispMaterial').textContent = `฿${totals.materialTotal.toLocaleString()}`;
+                document.getElementById('dispService').textContent = `฿${totals.serviceTotal.toLocaleString()}`;
+                document.getElementById('dispVat').textContent = `฿${totals.vat7.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+                document.getElementById('dispGrandTotal').textContent = `฿${totals.grandTotal.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+                document.getElementById('dispPayout').textContent = `฿${totals.electricianPayout.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            }
+
+            VoltFixElectrician.onQuotationChange(renderQuotationTable);
+            VoltFixElectrician.initQuotation();
+            runElectricalCalculation();
+
+            // 7. Add Custom Item
+            document.getElementById('btnAddCustomItem').addEventListener('click', () => {
+                const nameInput = document.getElementById('custItemName');
+                const catInput = document.getElementById('custItemCategory');
+                const priceInput = document.getElementById('custItemPrice');
+
+                const name = nameInput.value;
+                const cat = catInput.value;
+                const price = parseFloat(priceInput.value);
+
+                if (!name || isNaN(price) || price <= 0) {
+                    alert('กรุณากรอกชื่อรายการและราคาให้ถูกต้อง');
+                    return;
+                }
+
+                VoltFixElectrician.addQuotationItem(name, cat, price, 1);
+                nameInput.value = '';
+                priceInput.value = '';
+            });
+
+            // 8. Print Formal Quotation
+            document.getElementById('btnPrintQuote').addEventListener('click', () => {
+                const sigUrl = sigPad.getDataURL();
+                VoltFixElectrician.printFormalQuotation({
+                    jobTitle: 'งานตรวจซ่อมและติดตั้งระบบไฟฟ้าตามมาตรฐาน วสท.',
+                    jobId: 'VF-0891',
+                    clientName: 'คุณปิยะ สว่างวงษ์',
+                    clientLocation: 'สุขุมวิท 51, กรุงเทพมหานคร',
+                    electricianName: 'นายชลัมพล พากุล (683380038-0)',
+                    signatureDataUrl: sigUrl
+                });
+            });
+        });
+    </script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

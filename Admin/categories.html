@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Categories</title>
+
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>จัดการหมวดหมู่บริการ</h1>
+                <p class="subtitle">เปิด/ปิดบริการ และตั้งราคาเริ่มต้นที่ลูกค้าจะเห็น (หมวด → บริการ → ราคา)</p>
+            </div>
+
+            <div class="accordion-card">
+
+                <details class="master-accordion">
+
+                    <summary class="acc-main-header">
+                        <span>หมวดหมู่บริการทั้งหมด</span>
+                        <span class="arrow"></span>
+                    </summary>
+
+                    <div class="acc-groups-container">
+
+                        <div class="acc-group">
+
+                            <details class="cat-details">
+                                <summary class="cat-header">
+                                    <span>ไฟดับและเบรกเกอร์</span>
+                                    <span class="arrow"></span>
+                                </summary>
+                                <div class="cat-body">
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ไฟดับทั้งบ้าน</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="400">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>เบรกเกอร์ตก</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="350">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ปลั๊กมีกลิ่นไหม้</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="300">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="acc-group">
+                            <details class="cat-details">
+                                <summary class="cat-header">
+                                    <span>เดินสายและติดตั้ง</span>
+                                    <span class="arrow"></span>
+                                </summary>
+                                <div class="cat-body">
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>เดินสายไฟใหม่</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="500">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ติดตั้งโคมและพัดลม</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="450">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ติดตั้งของใหม่</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="400">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="acc-group">
+                            <details class="cat-details">
+                                <summary class="cat-header">
+                                    <span>ตรวจระบบไฟ</span>
+                                    <span class="arrow"></span>
+                                </summary>
+                                <div class="cat-body">
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ตรวจความปลอดภัยทั้งบ้าน</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="600">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ตรวจหาไฟรั่ว</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="500">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="acc-group">
+                            <details class="cat-details">
+                                <summary class="cat-header">
+                                    <span>ร้านอุปกรณ์</span>
+                                    <span class="arrow"></span>
+                                </summary>
+                                <div class="cat-body">
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>เบรกเกอร์</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="250">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>ปลั๊ก/สวิตช์</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="150">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>หลอดไฟ</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="100">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+
+                                    <details class="service-details">
+                                        <summary class="service-header">
+                                            <span>สายไฟ</span>
+                                            <span class="arrow"></span>
+                                        </summary>
+                                        <div class="service-content">
+                                            <div class="toggle-box">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <b>เปิดให้บริการนี้ในระบบ</b>
+                                            </div>
+                                            <div class="price-inputs">
+                                                <div class="form-group">
+                                                    <label>ราคาเริ่มต้น (฿)</label>
+                                                    <input type="number" value="200">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>ค่าเดินทางมาตรฐาน (฿)</label>
+                                                    <input type="number" value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="card add-service-card">
+                <h2>เพิ่มบริการใหม่</h2>
+                <div class="add-service-form">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="new-service-name">ชื่อบริการ</label>
+                            <input type="text" id="new-service-name" placeholder="เช่น ซ่อมเตาไฟฟ้า">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-service-cat">หมวดหมู่</label>
+                            <input type="text" id="new-service-cat" placeholder="เช่น ซ่อมเครื่องใช้ไฟฟ้า">
+                        </div>
+                    </div>
+                    <button type="button" class="btn-primary">เพิ่มบริการ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

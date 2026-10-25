@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - ประเมินราคาและสร้างใบเสนอราคา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/valuation.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="badge-role">ช่างไฟ</span>
+
+            <div class="menu">
+                <label for="st" class="status-top mobile-status">
+                    <span class="toggle"></span>
+                    <span class="st-on">พร้อมรับงาน</span>
+                    <span class="st-off">ไม่พร้อมรับงาน</span>
+                </label>
+
+                <a href="./findwork.html" class="act">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <input type="checkbox" id="drop-toggle" class="hide">
+                    <label for="drop-toggle" class="dropbtn">เพิ่มเติม ▾</label>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user-avatar">ว</div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="user-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="user-email">vichai@fix.co</div>
+                    </div>
+                    <hr class="user-divider">
+                    <div class="user-menu-list">
+                        <a href="./profile.html" class="user-link">โปรไฟล์ของฉัน</a>
+                       <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="user-link logout-link">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="page-header">
+            <h1 class="page-title">ประเมินราคาและสร้างใบเสนอราคา</h1>
+            <p class="page-subtitle">งาน เดินสายไฟใหม่ 2 ห้อง · ลาดพร้าว 71 (2.1 กม.) · เลือกจากรายการ แล้วดูยอดรวมทันที</p>
+        </section>
+
+        <div class="estimate-grid">
+            <div class="left-col">
+                <section class="card">
+                    <h2 class="section-title">1. ค่าแรง</h2>
+                    <div class="option-list">
+                        <label class="option-item">
+                            <input type="radio" name="labor" value="800" checked class="real-input">
+                            <span class="option-content">
+                                <span class="custom-radio"></span>
+                                <span class="option-info">
+                                    <span class="option-title">เดินสายไฟใหม่ (แบบมาตรฐาน)</span>
+                                    <span class="option-desc">เริ่มต้นตามช่วงราคาประเมิน</span>
+                                </span>
+                                <span class="option-price">฿800</span>
+                            </span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="labor" value="1200" class="real-input">
+                            <span class="option-content">
+                                <span class="custom-radio"></span>
+                                <span class="option-info">
+                                    <span class="option-title">เดินสายไฟใหม่ (แบบซับซ้อน/ฝังผนัง)</span>
+                                    <span class="option-desc">ระดับราคาสูงสุดสำหรับงานที่ใช้เวลามาก</span>
+                                </span>
+                                <span class="option-price">฿1,200</span>
+                            </span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2 class="section-title">2. อุปกรณ์ที่ต้องใช้ (จากแคตตาล็อก)</h2>
+                    <p class="section-subtitle">ลูกค้าจะเลือกยี่ห้อและเปลี่ยนระดับคุณภาพได้ในใบเสนอราคา</p>
+                    <div class="option-list">
+                        <label class="option-item">
+                            <input type="checkbox" value="150" checked class="real-input">
+                            <span class="option-content">
+                                <span class="custom-checkbox"></span>
+                                <span class="option-info">
+                                    <span class="option-title">อุปกรณ์เล็กน้อย (ตัวยึดสาย เทปพันสาย)</span>
+                                </span>
+                                <span class="option-price">฿150</span>
+                            </span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" value="420" class="real-input">
+                            <span class="option-content">
+                                <span class="custom-checkbox"></span>
+                                <span class="option-info">
+                                    <span class="option-title">สายไฟ THW 2.5 (10 ม.)</span>
+                                </span>
+                                <span class="option-price">฿420</span>
+                            </span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" value="95" class="real-input">
+                            <span class="option-content">
+                                <span class="custom-checkbox"></span>
+                                <span class="option-info">
+                                    <span class="option-title">เต้ารับคู่พร้อมกราวด์</span>
+                                </span>
+                                <span class="option-price">฿95</span>
+                            </span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h2 class="section-title">3. ค่าเดินทางและอื่นๆ</h2>
+                    <div class="option-list">
+                        <label class="option-item">
+                            <input type="radio" name="travel" value="50" checked class="real-input">
+                            <span class="option-content">
+                                <span class="custom-radio"></span>
+                                <span class="option-info">
+                                    <span class="option-title">ค่าเดินทาง (2.1 กม.)</span>
+                                </span>
+                                <span class="option-price">฿50</span>
+                            </span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="travel" value="100" class="real-input">
+                            <span class="option-content">
+                                <span class="custom-radio"></span>
+                                <span class="option-info">
+                                    <span class="option-title">ค่าบริการงานด่วน</span>
+                                    <span class="option-desc">ต้องไปถึงสถานที่ภายใน 30 นาที</span>
+                                </span>
+                                <span class="option-price">฿100</span>
+                            </span>
+                        </label>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-col">
+                <aside class="card summary-card">
+                    <h2 class="summary-title">สรุปใบเสนอราคา</h2>
+                    <div class="total-row">
+                        <span class="total-label">ยอดรวมที่ลูกค้าจะเห็น</span>
+                        <span class="total-price">฿0</span>
+                    </div>
+                    <div class="notice-box">
+                        ค่าคอมมิชชัน 15% หักจากค่าแรงเท่านั้น <a href="../Customer/commit.html" class="notice-link">ดูเงื่อนไข</a>
+                    </div>
+                    <div class="action-btns-vertical">
+                        <a href="./setoff.html" class="btn btn-blue-fill" style="display:block; text-align:center; text-decoration:none;">ส่งใบเสนอราคาให้ลูกค้า</a>
+                        <a href="./findwork.html" class="btn btn-blue-outline" style="display:block; text-align:center; text-decoration:none;">ยกเลิก</a>
+                    </div>
+                    <a href="./setoff.html" class="back-job-link">ไปที่งานที่กำลังทำ →</a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('.real-input');
+            const totalPriceElement = document.querySelector('.total-price');
+
+            function updateTotalPrice() {
+                let total = 0;
+                inputs.forEach(input => {
+                    if (input.checked) {
+                        total += parseFloat(input.value) || 0;
+                    }
+                });
+                totalPriceElement.textContent = `฿${total.toLocaleString()}`;
+            }
+
+            inputs.forEach(input => {
+                input.addEventListener('change', updateTotalPrice);
+            });
+
+            updateTotalPrice();
+        });
+    </script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+</html>

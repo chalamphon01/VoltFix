@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Logs</title>
+
+    <link rel="stylesheet" href="css/logs.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>ตรวจสอบประวัติการใช้งาน</h1>
+                <p class="subtitle">บันทึกการกระทำสำคัญของแอดมินและระบบ เพื่อความโปร่งใสและตรวจสอบย้อนหลังได้</p>
+            </div>
+
+            <div class="filters">
+                <button type="button" class="filter-btn active">ทั้งหมด</button>
+                <button type="button" class="filter-btn">การเงิน</button>
+                <button type="button" class="filter-btn">ผู้ใช้งาน</button>
+                <button type="button" class="filter-btn">KYC</button>
+                <button type="button" class="filter-btn">บัญชี</button>
+            </div>
+
+            <div class="table-card">
+
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>ผู้ทำรายการ</th>
+                            <th>การกระทำ</th>
+                            <th>หมวด</th>
+                            <th>เวลา</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="actor">Admin System</td>
+                            <td class="action-text">อนุมัติช่าง: ธนภัทร จิตดี</td>
+                            <td><span class="badge badge-kyc">KYC</span></td>
+                            <td class="time">2 นาทีที่แล้ว</td>
+                        </tr>
+                        <tr>
+                            <td class="actor">ระบบ</td>
+                            <td class="action-text">ชำระเงินสำเร็จ งาน #VF-0891 ฿650</td>
+                            <td><span class="badge badge-finance">การเงิน</span></td>
+                            <td class="time">8 นาทีที่แล้ว</td>
+                        </tr>
+                        <tr>
+                            <td class="actor">Admin System</td>
+                            <td class="action-text">ระงับบัญชี: อนันต์ ต.</td>
+                            <td><span class="badge badge-user">ผู้ใช้งาน</span></td>
+                            <td class="time">1 ชั่วโมงที่แล้ว</td>
+                        </tr>
+                        <tr>
+                            <td class="actor">ช่างวิชัย มานะกิจ</td>
+                            <td class="action-text">เข้าสู่ระบบ</td>
+                            <td><span class="badge badge-account">บัญชี</span></td>
+                            <td class="time">2 ชั่วโมงที่แล้ว</td>
+                        </tr>
+                        <tr>
+                            <td class="actor">Admin System</td>
+                            <td class="action-text">แก้ไขอัตราคอมมิชชั่นเป็น 15%</td>
+                            <td><span class="badge badge-finance">การเงิน</span></td>
+                            <td class="time">เมื่อวาน</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

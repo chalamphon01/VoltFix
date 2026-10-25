@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+            <div class="heading-group">
+                <h1>ภาพรวมระบบ</h1>
+                <p class="subtitle">สรุปสถานะแพลตฟอร์ม VoltFix วันนี้</p>
+            </div>
+
+            <div class="stats-grid">
+                <a href="finance.html" class="stat-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+                    <b class="stat-value">฿128,450</b>
+                    <span class="stat-label">รายได้รวมวันนี้</span>
+                </a>
+                <a href="follow-work.html" class="stat-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+                    <b class="stat-value">47</b>
+                    <span class="stat-label">งานกำลังดำเนินการ</span>
+                </a>
+                <a href="mange-user.html" class="stat-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+                    <b class="stat-value">183</b>
+                    <span class="stat-label">ช่างพร้อมทำงาน</span>
+                </a>
+                <a href="mange-user.html" class="stat-card" style="text-decoration:none; color:inherit; display:flex; flex-direction:column;">
+                    <b class="stat-value">312</b>
+                    <span class="stat-label">ผู้ใช้ใหม่วันนี้</span>
+                </a>
+            </div>
+
+            <div class="middle-grid">
+
+                <div class="card">
+                    <h2>งานต่อวัน (7 วันล่าสุด)</h2>
+
+                    <div class="bar-chart">
+                        <div class="bar-col"><span style="height: 70px;"></span>จ</div>
+                        <div class="bar-col"><span style="height: 85px;"></span>อ</div>
+                        <div class="bar-col"><span style="height: 60px;"></span>พ</div>
+                        <div class="bar-col"><span style="height: 120px;"></span>พฤ</div>
+                        <div class="bar-col"><span style="height: 95px;"></span>ศ</div>
+                        <div class="bar-col"><span style="height: 140px;"></span>ส</div>
+                        <div class="bar-col"><span style="height: 50px;"></span>อา</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>กิจกรรมล่าสุด</h2>
+
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <a href="job-detail-1.html" style="text-decoration:none; color:inherit;"><span>งานใหม่: ไฟดับที่สุขุมวิท 51</span></a>
+                            <b>2 นาทีที่แล้ว</b>
+                        </div>
+                        <div class="activity-item">
+                            <a href="mange-user.html" style="text-decoration:none; color:inherit;"><span>สมัครสมาชิกใหม่: กมล วงษ์ดี (ช่าง)</span></a>
+                            <b>5 นาทีที่แล้ว</b>
+                        </div>
+                        <div class="activity-item">
+                            <a href="approve-electrician.html" style="text-decoration:none; color:inherit;"><span>KYC รออนุมัติ: ธนภัทร จิตดี (ช่าง)</span></a>
+                            <b>8 นาทีที่แล้ว</b>
+                        </div>
+                        <div class="activity-item">
+                            <a href="disputes.html" style="text-decoration:none; color:inherit;"><span>ข้อพิพาทใหม่ #DIS-0446</span></a>
+                            <b>15 นาทีที่แล้ว</b>
+                        </div>
+                        <div class="activity-item">
+                            <a href="finance.html" style="text-decoration:none; color:inherit;"><span>ชำระเงิน ฿2,400 — งาน #VF-0891</span></a>
+                            <b>22 นาทีที่แล้ว</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcuts-group">
+                <h2>ทางลัดที่ใช้บ่อย</h2>
+
+                <div class="shortcuts-grid">
+                    <a href="approve-electrician.html" class="shortcut-card">
+                        <div class="shortcut-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>อนุมัติช่าง</h3>
+                        <p>8 รายการรอตรวจสอบ</p>
+                    </a>
+
+                    <a href="disputes.html" class="shortcut-card">
+                        <div class="shortcut-icon">
+                            <i data-lucide="flag"></i>
+                        </div>
+                        <h3>ข้อพิพาท</h3>
+                        <p>3 เรื่องรอดำเนินการ</p>
+                    </a>
+
+                    <a href="finance.html" class="shortcut-card">
+                        <div class="shortcut-icon">
+                            <i data-lucide="wallet"></i>
+                        </div>
+                        <h3>คำขอถอนเงิน</h3>
+                        <p>12 รายการรอโอน</p>
+                    </a>
+
+                    <a href="promotion.html" class="shortcut-card">
+                        <div class="shortcut-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>สร้างโปรโมชั่น</h3>
+                        <p>เพิ่มคูปองใหม่</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

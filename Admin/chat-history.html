@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Chat History</title>
+
+    <link rel="stylesheet" href="css/chat-history.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>ประวัติแชท</h1>
+                <p class="subtitle">ดูบทสนทนาระหว่างลูกค้าและช่างทั้งหมดในระบบ (อ่านอย่างเดียว
+                    ใช้สำหรับตรวจสอบข้อพิพาทหรือคุณภาพบริการ)</p>
+            </div>
+
+            <div class="table-card">
+
+                <table class="chat-table">
+                    <thead>
+                        <tr>
+                            <th>ลูกค้า</th>
+                            <th>ช่าง</th>
+                            <th>งาน</th>
+                            <th>สถานะ</th>
+                            <th>ข้อความล่าสุด</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="customer-name">ปิยะ สุขใจ</td>
+                            <td class="tech-name">วิชัย มานะกิจ</td>
+                            <td class="job-info">งาน #VF-0891 · ไฟดับทั้งบ้าน</td>
+                            <td><span class="badge badge-in-progress">กำลังดำเนินการ</span></td>
+                            <td class="last-time">5 นาทีที่แล้ว</td>
+                            <td class="action"><a href="chat-view-1.html" class="btn-chat">ดูบทสนทนา</a></td>
+                        </tr>
+                        <tr>
+                            <td class="customer-name">มาลี ก.</td>
+                            <td class="tech-name">สมชาย อินทร์ดี</td>
+                            <td class="job-info">งาน #VF-0890 · เดินสายไฟใหม่ 2 ห้อง</td>
+                            <td><span class="badge badge-completed">เสร็จสิ้น</span></td>
+                            <td class="last-time">วันนี้ 11:43</td>
+                            <td class="action"><a href="chat-view-2.html" class="btn-chat">ดูบทสนทนา</a></td>
+                        </tr>
+                        <tr>
+                            <td class="customer-name">ธนา ว.</td>
+                            <td class="tech-name">ประเสริฐ ทำดี</td>
+                            <td class="job-info">งาน #VF-0889 · ซ่อมพัดลมเพดาน</td>
+                            <td><span class="badge badge-completed">เสร็จสิ้น</span></td>
+                            <td class="last-time">2 เดือนก่อน</td>
+                            <td class="action"><a href="chat-view-3.html" class="btn-chat">ดูบทสนทนา</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

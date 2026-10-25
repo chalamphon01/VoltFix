@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Disputes</title>
+
+    <link rel="stylesheet" href="css/disputes.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="mange-user.html">จัดการผู้ใช้</a>
+                            <a href="approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="follow-work.html">ติดตามงาน</a>
+                            <a href="disputes.html">จัดการข้อพิพาท</a>
+                            <a href="chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="categories.html">หมวดหมู่บริการ</a>
+                            <a href="annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>จัดการข้อพิพาท</h1>
+                <p class="subtitle">ตรวจสอบและตัดสินข้อพิพาทระหว่างลูกค้าและช่างไฟ</p>
+            </div>
+
+            <div class="stats-grid-3">
+                <div class="stat-card">
+                    <b class="stat-value text-red">3</b>
+                    <span class="stat-label">รอดำเนินการ</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">48</b>
+                    <span class="stat-label">คลี่คลายแล้วเดือนนี้</span>
+                </div>
+                <div class="stat-card">
+                    <b class="stat-value">18 ชม.</b>
+                    <span class="stat-label">เวลาตอบสนองเฉลี่ย</span>
+                </div>
+            </div>
+
+            <div class="disputes-section">
+                <h2 class="section-title">รอดำเนินการ</h2>
+
+                <div class="disputes-grid">
+
+                    <div class="dispute-card">
+                        <div class="dispute-header">
+                            <div>
+                                <h3 class="dispute-id">#DIS-0446</h3>
+                                <p class="dispute-parties">ลูกค้า: ปิยะ สุขใจ · ช่าง: วิชัย มานะกิจ</p>
+                            </div>
+                            <span class="badge-pending">รอดำเนินการ</span>
+                        </div>
+
+                        <div class="dispute-details">
+                            <div class="detail-row">
+                                <span class="label">ประเภทปัญหา</span>
+                                <span class="value">งานไม่เรียบร้อย</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">แจ้งเมื่อ</span>
+                                <span class="value">15 นาทีที่แล้ว</span>
+                            </div>
+                        </div>
+
+                        <p class="attachment-note">ลูกค้าแนบรูปหลักฐานประกอบการแจ้งข้อพิพาทไว้ 2 รูป</p>
+                        <div class="evidence-grid" style="display:flex; gap:10px; margin: 12px 0 16px 0;">
+                            <div style="flex:1; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; background:#f8fafc;">
+                                <img src="img/dispute_socket_spark.jpg" alt="หลักฐานเต้ารับไหม้" style="width:100%; height:95px; object-fit:cover; display:block;">
+                                <div style="font-size:11px; color:#64748b; padding:4px 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">1. เต้ารับมีรอยไหม้ช็อต</div>
+                            </div>
+                            <div style="flex:1; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; background:#f8fafc;">
+                                <img src="img/dispute_burnt_wire.jpg" alt="หลักฐานสายไฟละลาย" style="width:100%; height:95px; object-fit:cover; display:block;">
+                                <div style="font-size:11px; color:#64748b; padding:4px 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">2. สายไฟทองแดงละลาย</div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons-group">
+                            <button type="button" class="btn-customer">ตัดสินให้ลูกค้า</button>
+                            <button type="button" class="btn-tech">ตัดสินให้ช่าง</button>
+                            <a href="job-detail-1.html" class="btn-view" style="display:inline-block; text-align:center; text-decoration:none;">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+
+                    <div class="dispute-card">
+                        <div class="dispute-header">
+                            <div>
+                                <h3 class="dispute-id">#DIS-0445</h3>
+                                <p class="dispute-parties">ลูกค้า: ธนา ว. · ช่าง: ประเสริฐ ทำดี</p>
+                            </div>
+                            <span class="badge-pending">รอดำเนินการ</span>
+                        </div>
+
+                        <div class="dispute-details">
+                            <div class="detail-row">
+                                <span class="label">ประเภทปัญหา</span>
+                                <span class="value">ราคาไม่ตรงกับใบเสนอ</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">แจ้งเมื่อ</span>
+                                <span class="value">1 ชั่วโมงที่แล้ว</span>
+                            </div>
+                        </div>
+
+                        <p class="attachment-note">ลูกค้าแนบรูปหลักฐานประกอบการแจ้งข้อพิพาทไว้ 2 รูป</p>
+                        <div class="evidence-grid" style="display:flex; gap:10px; margin: 12px 0 16px 0;">
+                            <div style="flex:1; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; background:#f8fafc;">
+                                <img src="img/dispute_quote.jpg" alt="ใบเสนอราคาเดิม" style="width:100%; height:95px; object-fit:cover; display:block;">
+                                <div style="font-size:11px; color:#64748b; padding:4px 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">1. ใบเสนอราคาเดิม ฿650</div>
+                            </div>
+                            <div style="flex:1; border-radius:10px; overflow:hidden; border:1px solid #e2e8f0; background:#f8fafc;">
+                                <img src="img/dispute_bill.jpg" alt="บิลเรียกเก็บเงินจริง" style="width:100%; height:95px; object-fit:cover; display:block;">
+                                <div style="font-size:11px; color:#64748b; padding:4px 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">2. บิลเรียกเก็บ ฿1,200</div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons-group">
+                            <button type="button" class="btn-customer">ตัดสินให้ลูกค้า</button>
+                            <button type="button" class="btn-tech">ตัดสินให้ช่าง</button>
+                            <a href="job-detail-2.html" class="btn-view" style="display:inline-block; text-align:center; text-decoration:none;">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

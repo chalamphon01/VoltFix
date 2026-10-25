@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Chat History#VF-0890</title>
+
+    <link rel="stylesheet" href="css/chat-view.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+            <a href="./chat-history.html" class="back-link">← กลับประวัติแชท</a>
+
+            <div class="chat-card">
+                <div class="chat-header">
+                    <div class="user-meta">
+                        <div class="avatar">ม</div>
+                        <div class="user-info">
+                            <h1>มาลี ก. ↔ สมชาย อินทร์ดี</h1>
+                            <p>งาน #VF-0890 · เดินสายไฟใหม่ 2 ห้อง</p>
+                        </div>
+                    </div>
+                    <span class="badge-readonly">มุมมองแอดมิน · อ่านอย่างเดียว</span>
+                </div>
+
+                <div class="chat-body">
+                    <div class="message incoming">
+                        <div class="bubble">สวัสดีครับคุณมาลี ผมสมชาย ช่างไฟฟ้าครับ เดินสายไฟ 2 ห้องนะครับ</div>
+                        <span class="msg-time">10:15</span>
+                    </div>
+
+                    <div class="message outgoing">
+                        <div class="bubble">ใช่ค่ะ ต้องการเพิ่มจุดปลั๊กไฟและเดินท่อร้อยสายไฟใหม่ในห้องนอนค่ะ</div>
+                        <span class="msg-time">10:20</span>
+                    </div>
+
+                    <div class="message incoming">
+                        <div class="bubble">รับทราบครับ เข้าไปประเมินหน้างานและส่งใบเสนอราคาให้เรียบร้อยครับ</div>
+                        <span class="msg-time">11:43</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-notice">
+                แอดมินไม่สามารถส่งข้อความในบทสนทนานี้ได้ หน้านี้ใช้สำหรับตรวจสอบเท่านั้น
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

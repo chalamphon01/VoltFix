@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - การแจ้งเตือนระบบ</title>
+    <link rel="stylesheet" href="css_user/notification.css">
+    <link rel="stylesheet" href="css_user/customer_theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("open");
+    }
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="./index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-bolt light"></i></div>
+                <span>VoltFix</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="./index.html">หน้าแรก</a></li>
+                <li class="nav-item dropdown">
+                    <a href="./service.html" class="nav-link">
+                        บริการ <i class="fa-solid fa-caret-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="./service.html" class="dropdown-item header-item">ดูบริการทั้งหมด</a>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                เรื่องเร่งด่วน <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+
+                            <ul class="submenu">
+                                <li><a href="./service.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./callfast.html" class="dropdown-item">ไฟดับทั้งบ้าน</a></li>
+                                <li><a href="./callfast.html" class="dropdown-item">เบรกเกอร์ตก</a></li>
+                                <li><a href="./callfast.html" class="dropdown-item">ปลั๊กมีกลิ่นไหม้</a></li>
+                                <li><a href="./callfast.html" class="dropdown-item">ไฟดูด / ไฟรั่ว</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                งานทั่วไป <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+
+                            <ul class="submenu">
+                                <li><a href="./service.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./normalcall.html" class="dropdown-item">ติดตั้งปลั๊ก/สวิตช์</a></li>
+                                <li><a href="./normalcall.html" class="dropdown-item">เดินสายไฟใหม่</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./tecnichain.html">ช่างไฟ</a></li>
+                <li class="nav-item dropdown">
+                    <a href="./stelec.html" class="nav-link">
+                        ร้านอุปกรณ์ <i class="fa-solid fa-caret-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="./stelec.html" class="dropdown-item header-item">ดูสินค้าทั้งหมด</a>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                ตู้ไฟและเบรกเกอร์ <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+
+                            <ul class="submenu">
+                                <li><a href="./finestelec.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">เบรกเกอร์ทั่วไป</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">เบรกเกอร์กันไฟรั่ว</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">ตู้คอนซูมเมอร์</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                ปลั๊กและสวิตช์ <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="./finestelec.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">ปลั๊กกราวด์</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">สวิตช์ไฟ</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">เต้ารับ / ปลั๊กไฟ</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                หลอดไฟและโคม <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="./finestelec.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">หลอดไฟ LED</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">โคมไฟดาวน์ไลท์</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="./finestelec.html" class="dropdown-item has-arrow">
+                                สายไฟ <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="./finestelec.html" class="dropdown-item header-item">ดูทั้งหมด</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">สายไฟ THW</a></li>
+                                <li><a href="./finestelec.html" class="dropdown-item">สายไฟ VAF</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./learn.html">เรียนรู้</a></li>
+                <li><a href="./mywork.html">งานของฉัน</a></li>
+                <li class="menu-regis"><a href="./registec.html">สมัครเป็นช่าง</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="./registec.html" class="btn-regiselec">สมัครเป็นช่าง</a>
+                <a href="./call.html" class="btn-sos">
+                        <i class="fa-solid fa-bolt-lightning light"></i>
+                        <span>เรียกช่างด่วน</span>
+                    </a>
+
+                <a href="./chat.html" aria-label="ข้อความ" class="icon-btn">
+                        <i class="fa-regular fa-message"></i>
+                        <span class="badge-dot"></span>
+                    </a>
+
+                <a href="./notification.html" aria-label="การแจ้งเตือน" class="icon-btn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge-dot_1"></span>
+                    </a>
+
+                <div class="user-dropdown">
+                    <button type="button" class="user-avatar" aria-label="โปรไฟล์">ป</button>
+
+                    <div class="user-dropdown-menu">
+                        <div class="user-info">
+                            <div class="user-name">ปิยะ สุขใจ</div>
+                            <div class="user-email">piya@email.com</div>
+                        </div>
+
+                        <div class="profile-menu-list">
+                            <a href="./profile.html" class="profile-menu-item">โปรไฟล์ของฉัน</a>
+                            <a href="./coupon.html" class="profile-menu-item">คูปองของฉัน</a>
+                            <a href="../Login/VoltFix%20-%20Login/customer-login.html" class="profile-menu-item text-danger">ออกจากระบบ</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="icon-btn menu-btn" aria-label="เมนู" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="container page-notifications">
+        <a href="./index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> กลับหน้าแรก
+        </a>
+
+        <div class="notif-header">
+            <h1 class="section-title">การแจ้งเตือน</h1>
+            <button class="btn-mark-read">อ่านทั้งหมดแล้ว</button>
+        </div>
+
+        <div class="notif-filters">
+            <button class="filter-pill active">ทั้งหมด</button>
+            <button class="filter-pill">งานของฉัน</button>
+            <button class="filter-pill">โปรโมชั่น</button>
+            <button class="filter-pill">ระบบ</button>
+        </div>
+
+        <div class="notif-list-card">
+
+            <a href="./mywork.html" class="notif-item unread">
+                <div class="notif-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">
+                            <span class="unread-dot"></span> ช่างวิชัยกำลังเดินทางมาหาคุณ
+                        </h2>
+                        <span class="notif-time">2 นาที</span>
+                    </div>
+                    <p class="notif-desc">ถึงในอีกประมาณ 12 นาที เตรียมตรวจรหัสยืนยัน 4 หลักก่อนเปิดประตู</p>
+                </div>
+            </a>
+
+            <a href="./mywork.html" class="notif-item unread">
+                <div class="notif-icon">
+                    <i class="fa-regular fa-file-lines"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">
+                            <span class="unread-dot"></span> มีข้อความใหม่จากช่างวิชัย
+                        </h2>
+                        <span class="notif-time">5 นาที</span>
+                    </div>
+                    <p class="notif-desc">"อีก 12 นาทีถึงครับ ตอนถึงบ้านผมจะบอกรหัสให้ตรวจนะครับ"</p>
+                </div>
+            </a>
+
+            <a href="./mywork.html" class="notif-item unread">
+                <div class="notif-icon">
+                    <i class="fa-regular fa-file-lines"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">
+                            <span class="unread-dot"></span> ใบเสนอราคาใหม่ ฿650
+                        </h2>
+                        <span class="notif-time">12 นาที</span>
+                    </div>
+                    <p class="notif-desc">ช่างวิชัยส่งราคาแยกค่าแรง อุปกรณ์ และค่าเดินทางให้แล้ว</p>
+                </div>
+            </a>
+
+            <a href="./mywork.html" class="notif-item">
+                <div class="notif-icon">
+                    <i class="fa-regular fa-lightbulb"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">คูปองลด ฿100 สำหรับอุปกรณ์ไฟฟ้า</h2>
+                        <span class="notif-time">เมื่อวาน</span>
+                    </div>
+                    <p class="notif-desc">ใช้ได้กับการสั่งซื้อในร้านอุปกรณ์ ถึงสิ้นเดือนนี้</p>
+                </div>
+            </a>
+
+            <a href="./mywork.html" class="notif-item">
+                <div class="notif-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">ช่วยรีวิวงานล่าสุดหน่อยนะ</h2>
+                        <span class="notif-time">เมื่อวาน</span>
+                    </div>
+                    <p class="notif-desc">งานเดินสายไฟใหม่ 2 ห้อง ใช้เวลาไม่ถึง 1 นาที</p>
+                </div>
+            </a>
+
+            <a href="./mywork.html" class="notif-item">
+                <div class="notif-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="notif-content">
+                    <div class="notif-top">
+                        <h2 class="notif-title">เคล็ดลับความปลอดภัย</h2>
+                        <span class="notif-time">2 วันก่อน</span>
+                    </div>
+                    <p class="notif-desc">อาการแบบไหนควรเรียกช่างทันที อ่านไว้ก่อนเกิดเหตุ</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-flex">
+                <div class="footer-brand">
+                    <p class="footer-brand"><b>VoltFix</b></p>
+                    <p class="footer-desc">
+                        แพลตฟอร์มเรียกช่างไฟที่ตรวจใบรับรองแล้ว สำหรับคนที่ไม่ต้องรู้เรื่องไฟ<br>ก็ใช้ได้
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">สำหรับลูกค้า</h3>
+                    <ul class="footer-links">
+                        <li><a href="./service.html">บริการทั้งหมด</a></li>
+                        <li><a href="./tecnichain.html">ค้นหาช่าง</a></li>
+                        <li><a href="./learn.html">ศูนย์ความรู้</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">สำหรับช่าง</h3>
+                    <ul class="footer-links">
+                        <li><a href="./registec.html">สมัครเป็นช่าง</a></li>
+                        <li><a href="../Electrician/findwork.html">เข้าสู่ระบบช่าง</a></li>
+                        <li><a href="./commit.html">เงื่อนไขและค่าคอมมิชชัน</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">ช่วยเหลือ</h3>
+                    <ul class="footer-links">
+                        <li><a href="./readlearn.html">คำถามที่พบบ่อย</a></li>
+                        <li><a href="../Admin/disputes.html">แจ้งข้อพิพาท</a></li>
+                        <li><a href="../Login/VoltFix%20-%20Login/customer-login.html">เข้าสู่ระบบ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© VoltFix – โปรเจกต์วิชา Web Design (ตัวอย่างหน้า Home ฝั่งลูกค้า)</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

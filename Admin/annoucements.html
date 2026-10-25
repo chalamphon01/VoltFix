@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Annoucements</title>
+
+    <link rel="stylesheet" href="css/annoucements.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>จัดการประกาศและแจ้งเตือน</h1>
+                <p class="subtitle">ส่งประกาศหรือการแจ้งเตือนไปยังผู้ใช้ในระบบ</p>
+            </div>
+
+            <div class="card form-card">
+                <h2>สร้างประกาศใหม่</h2>
+
+                <form class="announcement-form">
+
+                    <div class="form-group">
+                        <label for="ann-title">หัวข้อ</label>
+                        <input type="text" id="ann-title" placeholder="เช่น ปิดปรับปรุงระบบ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ann-body">ข้อความ</label>
+                        <textarea id="ann-body" rows="4" placeholder="รายละเอียดประกาศ"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ส่งถึง</label>
+
+                        <div class="target-pills">
+                            <button type="button" class="pill-btn active">ทุกคน</button>
+                            <button type="button" class="pill-btn">เฉพาะลูกค้า</button>
+                            <button type="button" class="pill-btn">เฉพาะช่างไฟ</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="send-date">วันที่ส่ง</label>
+                            <input type="date" id="send-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="send-time">เวลาส่ง</label>
+                            <input type="time" id="send-time">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">ส่งประกาศ</button>
+                </form>
+            </div>
+
+            <div class="past-announcements-section">
+                <h2 class="section-title">ประกาศที่ผ่านมา</h2>
+                <div class="table-card">
+
+                    <table class="announcement-table">
+                        <thead>
+                            <tr>
+                                <th>หัวข้อ</th>
+                                <th>ส่งถึง</th>
+                                <th>เวลา</th>
+                                <th>สถานะ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ann-title-text">ปิดปรับปรุงระบบชั่วคราว</td>
+                                <td class="target">ทุกคน</td>
+                                <td class="time">2 วันก่อน</td>
+                                <td><span class="badge badge-sent">ส่งแล้ว</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ann-title-text">โปรโมชั่นลด ฿100 ค่าอุปกรณ์</td>
+                                <td class="target">ลูกค้า</td>
+                                <td class="time">5 วันก่อน</td>
+                                <td><span class="badge badge-sent">ส่งแล้ว</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ann-title-text">แจ้งอัปเดตค่าคอมมิชชั่น</td>
+                                <td class="target">ช่างไฟ</td>
+                                <td class="time">1 ต.ค. 2569, 08:00</td>
+                                <td><span class="badge badge-scheduled">ตั้งเวลาไว้</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoltFix | สมัครสมาชิกลูกค้า</title>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;700;800&amp;display=swap">
+
+  <link rel="stylesheet" href="css/customer-register.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <main class="auth-page">
+
+    <section class="auth-card">
+
+      <header class="brand">
+        <div class="brand-icon-slot">
+          <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+          <span class="brand-name">VoltFix</span>
+        </div>
+      </header>
+
+      <h1 class="title">สร้างบัญชีใหม่</h1>
+      <p class="subtitle">สมัครสมาชิกเพื่อเริ่มใช้งาน VoltFix</p>
+
+      <nav class="role-tabs" aria-label="ประเภทผู้ใช้งาน">
+        <a class="role-tab active" href="./customer-register.html">ลูกค้า</a>
+        <a class="role-tab" href="./technician-register.html">ช่างไฟ</a>
+        <a class="role-tab" href="./admin-register.html">แอดมิน</a>
+      </nav>
+
+      <nav class="auth-tabs" aria-label="บัญชี">
+        <a class="auth-tab" href="./customer-login.html">เข้าสู่ระบบ</a>
+        <a class="auth-tab active" href="./customer-register.html">สมัครสมาชิก</a>
+      </nav>
+
+      <form action="../../Customer/index.html">
+
+        <div class="form-group">
+          <label class="form-label" for="customer-name">ชื่อ-นามสกุล</label>
+          <input class="input" id="customer-name" type="text" placeholder="เช่น ปิยะ วัฒนากุล" autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="customer-phone">เบอร์โทร</label>
+          <input class="input" id="customer-phone" type="tel" placeholder="เช่น 0812345678" autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="customer-email">อีเมล</label>
+          <input class="input" id="customer-email" type="email" placeholder="เช่น piya@email.com" autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="customer-password">ตั้งรหัสผ่าน</label>
+          <input class="input" id="customer-password" type="password" placeholder="อย่างน้อย 8 ตัวอักษร"
+            autocomplete="new-password">
+        </div>
+
+        <p class="password-rules">แนะนำให้ใช้ตัวอักษร ตัวเลข และสัญลักษณ์ผสมกันเพื่อความปลอดภัย</p>
+
+        <button class="btn btn-yellow" type="submit">สร้างบัญชีลูกค้า</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>

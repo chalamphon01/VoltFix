@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แจ้งปัญหา - VoltFix</title>
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="badge-role">ช่างไฟ</span>
+
+            <div class="menu">
+
+                <label for="st" class="status-top mobile-status">
+                    <span class="toggle"></span>
+                    <span class="st-on">พร้อมรับงาน</span>
+                    <span class="st-off">ไม่พร้อมรับงาน</span>
+                </label>
+
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <input type="checkbox" id="drop-toggle" class="hide">
+                    <label for="drop-toggle" class="dropbtn act">เพิ่มเติม ▾</label>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html" class="act-sub">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right">
+
+            <a href="./chat.html" class="chat-icon-container" aria-label="ห้องแชท">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="notification-dot"></span>
+            </a>
+
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user-avatar">ว</div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="user-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="user-email">vichai@fix.co</div>
+                    </div>
+                    <hr class="user-divider">
+                    <div class="user-menu-list">
+                        <a href="./profile.html" class="user-link">โปรไฟล์ของฉัน</a>
+                       <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="user-link logout-link">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="page-header">
+            <h1>แจ้งปัญหา</h1>
+            <p>เจอปัญหากับงานหรือแอป แจ้งเราได้เลย</p>
+        </div>
+
+        <div class="form-card">
+
+            <div class="form-group">
+                <label class="form-label">เกี่ยวกับงานไหน</label>
+                <div class="option-group" id="groupJob">
+                    <button type="button" class="option-btn active" data-job="#VF-0891 ไฟดับทั้งบ้าน">#VF-0891 ไฟดับทั้งบ้าน</button>
+                    <button type="button" class="option-btn" data-job="ซ่อมพัดลมเพดาน">ซ่อมพัดลมเพดาน</button>
+                    <button type="button" class="option-btn" data-job="ไม่เกี่ยวกับงาน">ไม่เกี่ยวกับงาน</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">ปัญหาที่พบ</label>
+                <div class="option-group" id="groupIssue">
+                    <button type="button" class="option-btn active" data-issue="ลูกค้าไม่อยู่บ้าน">ลูกค้าไม่อยู่บ้าน</button>
+                    <button type="button" class="option-btn" data-issue="ลูกค้าเปลี่ยนงานหรือราคา">ลูกค้าเปลี่ยนงานหรือราคา</button>
+                    <button type="button" class="option-btn" data-issue="ปัญหาการชำระเงิน">ปัญหาการชำระเงิน</button>
+                    <button type="button" class="option-btn" data-issue="ปัญหาการใช้แอป">ปัญหาการใช้แอป</button>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+                <label class="form-label">รายละเอียด</label>
+                <textarea id="reportDetails" class="form-textarea" maxlength="500" placeholder="เล่าสั้นๆ ว่าเกิดอะไรขึ้น"></textarea>
+                <div class="char-counter"><span id="charCount">0</span> / 500 ตัวอักษร</div>
+                <div id="fieldError" class="field-error">กรุณากรอกรายละเอียดปัญหาเพื่อให้เจ้าหน้าที่ตรวจสอบ</div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label class="form-label">แนบรูปภาพหรือหลักฐาน (ไม่บังคับ)</label>
+                <div class="upload-box">
+                    <input type="file" id="reportPhotoInput" accept="image/*" class="hide" multiple>
+                    <label for="reportPhotoInput" class="upload-trigger">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <span>แนบรูปถ่ายปัญหา (สูงสุด 3 รูป)</span>
+                    </label>
+                    <div id="photoPreviewList" class="photo-preview-list"></div>
+                </div>
+            </div>
+
+            <button type="button" id="btnSubmitReport" class="btn-submit">
+                ส่งเรื่อง
+            </button>
+
+        </div>
+
+        <!-- Recent Tickets Section -->
+        <div class="recent-section">
+            <h2 class="recent-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                ประวัติการแจ้งเรื่องล่าสุดของคุณ
+            </h2>
+            <div id="recentReportsList">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal แจ้งเตือนส่งเรื่องสำเร็จ -->
+    <div id="reportSuccessModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon-circle">✓</div>
+            <h2 class="modal-title">ส่งเรื่องแจ้งปัญหาเรียบร้อย</h2>
+            <p class="modal-desc">
+                เจ้าหน้าที่ฝ่ายประสานงาน VoltFix ได้รับข้อมูลแล้ว และกำลังดำเนินการตรวจสอบเพื่อติดต่อกลับหาคุณโดยเร็ว
+            </p>
+
+            <div class="modal-ticket-card">
+                <div class="modal-ticket-row">
+                    <span class="label">หมายเลขคำร้อง:</span>
+                    <span class="val" id="modalTicketId">#TKT-829142</span>
+                </div>
+                <div class="modal-ticket-row">
+                    <span class="label">เกี่ยวกับงาน:</span>
+                    <span class="val" id="modalJobName">#VF-0891 ไฟดับทั้งบ้าน</span>
+                </div>
+                <div class="modal-ticket-row">
+                    <span class="label">หัวข้อปัญหา:</span>
+                    <span class="val" id="modalIssueType">ลูกค้าไม่อยู่บ้าน</span>
+                </div>
+                <div class="modal-ticket-row">
+                    <span class="label">สถานะปัจจุบัน:</span>
+                    <span class="val" style="color: #D97706;">🟡 กำลังตรวจสอบ (ติดต่อกลับใน 15–30 นาที)</span>
+                </div>
+            </div>
+
+            <div class="modal-btns">
+                <a href="./setoff.html" class="modal-btn-primary">ไปที่หน้างานที่กำลังทำ</a>
+                <a href="./findwork.html" class="modal-btn-secondary">กลับสู่หน้าหางาน</a>
+                <button type="button" id="btnCloseModal" class="modal-btn-secondary" style="border:none; background:transparent; color:#64748B;">
+                    ปิดหน้าต่าง / แจ้งเรื่องอื่นเพิ่มเติม
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dropdown-helper.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const groupJob = document.getElementById('groupJob');
+            const groupIssue = document.getElementById('groupIssue');
+            const textarea = document.getElementById('reportDetails');
+            const charCount = document.getElementById('charCount');
+            const fieldError = document.getElementById('fieldError');
+            const btnSubmit = document.getElementById('btnSubmitReport');
+            const photoInput = document.getElementById('reportPhotoInput');
+            const previewList = document.getElementById('photoPreviewList');
+
+            const modal = document.getElementById('reportSuccessModal');
+            const modalTicketId = document.getElementById('modalTicketId');
+            const modalJobName = document.getElementById('modalJobName');
+            const modalIssueType = document.getElementById('modalIssueType');
+            const btnCloseModal = document.getElementById('btnCloseModal');
+            const recentList = document.getElementById('recentReportsList');
+
+            let attachedPhotos = [];
+
+            // 1. Interactive Button Selection for Option Groups
+            function setupOptionGroup(container) {
+                const buttons = container.querySelectorAll('.option-btn');
+                buttons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        buttons.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                });
+            }
+
+            setupOptionGroup(groupJob);
+            setupOptionGroup(groupIssue);
+
+            // 2. Character Counter & Clear Error on Typing
+            textarea.addEventListener('input', () => {
+                const len = textarea.value.length;
+                charCount.textContent = len;
+                if (len > 0) {
+                    fieldError.classList.remove('show');
+                    textarea.classList.remove('has-error');
+                }
+            });
+
+            // 3. Photo Upload with Live Previews & Remove Action
+            photoInput.addEventListener('change', (e) => {
+                const files = Array.from(e.target.files);
+                if (!files.length) return;
+
+                files.forEach(file => {
+                    if (attachedPhotos.length >= 3) {
+                        alert('แนบรูปภาพได้สูงสุด 3 รูป');
+                        return;
+                    }
+                    const reader = new FileReader();
+                    reader.onload = (evt) => {
+                        const url = evt.target.result;
+                        attachedPhotos.push({ name: file.name, url: url });
+                        renderPhotos();
+                    };
+                    reader.readAsDataURL(file);
+                });
+                photoInput.value = '';
+            });
+
+            function renderPhotos() {
+                previewList.innerHTML = '';
+                attachedPhotos.forEach((item, index) => {
+                    const div = document.createElement('div');
+                    div.className = 'photo-preview-item';
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = item.name;
+                    div.appendChild(img);
+
+                    const btnRemove = document.createElement('button');
+                    btnRemove.type = 'button';
+                    btnRemove.className = 'btn-remove-photo';
+                    btnRemove.dataset.idx = index;
+                    btnRemove.title = 'ลบรูป';
+                    btnRemove.textContent = '✕';
+                    div.appendChild(btnRemove);
+                    div.querySelector('.btn-remove-photo').addEventListener('click', (ev) => {
+                        ev.stopPropagation();
+                        attachedPhotos.splice(index, 1);
+                        renderPhotos();
+                    });
+                    previewList.appendChild(div);
+                });
+            }
+
+            // 4. Load & Render Recent Reports History
+            function loadRecentReports() {
+                let saved = [];
+                try {
+                    const raw = localStorage.getItem('voltfix_reports');
+                    if (raw) saved = JSON.parse(raw);
+                } catch (err) {
+                    saved = [];
+                }
+
+                if (!saved.length) {
+                    // Default sample ticket
+                    saved = [
+                        {
+                            id: '#TKT-782194',
+                            job: '#VF-0782 ซ่อมปลั๊กไฟช็อต',
+                            issue: 'ปัญหาการชำระเงิน',
+                            details: 'ลูกค้าโอนเงินยอดขาด 150 บาท ได้ประสานงานเคลียร์ยอดเรียบร้อยแล้ว',
+                            time: 'เมื่อวานนี้ 16:40 น.',
+                            status: 'resolved'
+                        }
+                    ];
+                }
+
+                renderRecentList(saved);
+            }
+
+            function renderRecentList(items) {
+                recentList.innerHTML = '';
+                items.forEach(t => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'ticket-item';
+                    const isResolved = t.status === 'resolved';
+                    const badgeClass = isResolved ? 'badge-resolved' : 'badge-pending';
+                    const badgeText = isResolved ? '✓ ดำเนินการแล้ว' : '🟡 กำลังตรวจสอบ';
+
+                    itemDiv.innerHTML = `
+                        <div class="ticket-info">
+                            <h4>${t.id} · ${t.issue}</h4>
+                            <p>${t.job} · <span style="color:#0F172A;">${t.details.length > 55 ? t.details.slice(0, 55) + '...' : t.details}</span></p>
+                            <p style="margin-top:4px; font-size:11.5px; color:#94A3B8;">ส่งเมื่อ: ${t.time}</p>
+                        </div>
+                        <div class="ticket-badge ${badgeClass}">
+                            ${badgeText}
+                        </div>
+                    `;
+                    recentList.appendChild(itemDiv);
+                });
+            }
+
+            loadRecentReports();
+
+            // 5. Submit Action
+            btnSubmit.addEventListener('click', () => {
+                const text = textarea.value.trim();
+                if (!text) {
+                    fieldError.classList.add('show');
+                    textarea.classList.add('has-error');
+                    textarea.focus();
+                    return;
+                }
+
+                const activeJobBtn = groupJob.querySelector('.option-btn.active');
+                const activeIssueBtn = groupIssue.querySelector('.option-btn.active');
+                const selectedJob = activeJobBtn ? activeJobBtn.dataset.job || activeJobBtn.textContent.trim() : 'ไม่ระบุงาน';
+                const selectedIssue = activeIssueBtn ? activeIssueBtn.dataset.issue || activeIssueBtn.textContent.trim() : 'ปัญหาทั่วไป';
+
+                // Loading feedback
+                const origHtml = btnSubmit.innerHTML;
+                btnSubmit.innerHTML = '<span style="display:inline-flex; align-items:center; gap:8px;">⏳ กำลังส่งเรื่อง...</span>';
+                btnSubmit.disabled = true;
+
+                setTimeout(() => {
+                    const ticketNum = `#TKT-${Math.floor(100000 + Math.random() * 900000)}`;
+                    const now = new Date();
+                    const timeStr = `วันนี้ ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')} น.`;
+
+                    const newTicket = {
+                        id: ticketNum,
+                        job: selectedJob,
+                        issue: selectedIssue,
+                        details: text,
+                        time: timeStr,
+                        status: 'pending'
+                    };
+
+                    // Save to local storage
+                    try {
+                        let saved = [];
+                        const raw = localStorage.getItem('voltfix_reports');
+                        if (raw) saved = JSON.parse(raw);
+                        saved.unshift(newTicket);
+                        localStorage.setItem('voltfix_reports', JSON.stringify(saved));
+                        renderRecentList(saved);
+                    } catch (err) {
+                        // ignore
+                    }
+
+                    // Populate and show modal
+                    modalTicketId.textContent = ticketNum;
+                    modalJobName.textContent = selectedJob;
+                    modalIssueType.textContent = selectedIssue;
+                    modal.classList.add('open');
+
+                    // Reset button
+                    btnSubmit.innerHTML = origHtml;
+                    btnSubmit.disabled = false;
+                }, 400);
+            });
+
+            // 6. Close Modal & Reset Form
+            btnCloseModal.addEventListener('click', () => {
+                modal.classList.remove('open');
+                textarea.value = '';
+                charCount.textContent = '0';
+                attachedPhotos = [];
+                renderPhotos();
+                // Reset active buttons to first item
+                groupJob.querySelectorAll('.option-btn').forEach((b, i) => {
+                    b.classList.toggle('active', i === 0);
+                });
+                groupIssue.querySelectorAll('.option-btn').forEach((b, i) => {
+                    b.classList.toggle('active', i === 0);
+                });
+            });
+
+            // Close modal when clicking on dark backdrop
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    btnCloseModal.click();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

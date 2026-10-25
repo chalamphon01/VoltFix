@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - งานที่กำลังทำ</title>
+    <link rel="stylesheet" href="css/setoff4.css">
+    <link rel="stylesheet" href="css/electrician_theme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="st" class="hide" checked>
+
+    <input type="checkbox" id="menu-toggle" class="hide">
+
+    <nav class="nav">
+        <div class="n-left">
+            <a href="./findwork.html" class="logo">
+                <i class="ic">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-zap preview-icon">
+                        <path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" />
+                    </svg>
+                </i> VoltFix
+            </a>
+            <span class="role">ช่างไฟ</span>
+            <div class="menu">
+
+                <a href="./findwork.html">หางาน</a>
+                <a href="./setoff.html" class="act">งานที่กำลังทำ</a>
+                <a href="./workschedule.html">ตารางงาน</a>
+                <a href="./earnandwithd.html">รายได้</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">เพิ่มเติม ▾</a>
+                    <div class="dropdown-content">
+                        <a href="./portandreview.html">ผลงานและรีวิว</a>
+                        <a href="./manageserandprice.html">บริการและราคา</a>
+                        <a href="./verify.html">ยืนยันตัวตนและใบรับรอง</a>
+                        <a href="./report.html">แจ้งปัญหา</a>
+                        <a href="./calculator.html" style="color: #D97706; font-weight: 700;">⚡ เครื่องคำนวณวิศวกรรมไฟฟ้า</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="n-right">
+
+            <a href="./chat.html" class="notification-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span class="red-dot"></span>
+            </a>
+
+            <label for="st" class="status-top desktop-status">
+                <span class="toggle"></span>
+                <span class="st-on">พร้อมรับงาน</span>
+                <span class="st-off">ไม่พร้อมรับงาน</span>
+            </label>
+
+            <div class="user-dropdown">
+                <div class="user">
+                    <span class="a1">ว</span>
+                </div>
+                <div class="user-dropdown-content">
+                    <div class="user-info">
+                        <div class="u-name">ช่างวิชัย มานะกิจ</div>
+                        <div class="u-email">vichai@fix.co</div>
+                    </div>
+                    <div class="u-menu">
+                        <a href="./profile.html">โปรไฟล์ของฉัน</a>
+                        <a href="../Login/VoltFix%20-%20Login/technician-login.html" class="logout-btn">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+
+            <label for="menu-toggle" class="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="main">
+        <header class="head">
+            <h1>งานที่กำลังทำ</h1>
+            <p>#VF-0891 ไฟดับทั้งบ้าน · คุณปิยะ ส. · ยอดตกลง ฿650</p>
+        </header>
+
+        <div class="content-row">
+            <div class="card-panel">
+                <div class="card-title mb-4">ขั้นตอนของงาน</div>
+                <div class="stepper-container">
+                    <div class="stepper-line"></div>
+                    <div class="step-item">
+                        <div class="step-icon completed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-title">ออกเดินทาง</div>
+                            <div class="step-desc">ลูกค้าเห็นเวลาที่คุณจะถึง</div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon completed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-title">ถึงบ้านลูกค้า</div>
+                            <div class="step-desc">แจ้งรหัสยืนยันตัวตน 4 หลัก</div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon completed">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <div class="step-title">กำลังซ่อม</div>
+                            <div class="step-desc">ถ่ายรูปก่อนและหลังทำงาน</div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon active">4</div>
+                        <div class="step-content">
+                            <div class="step-title">งานเสร็จ</div>
+                            <div class="step-desc">ส่งงานและรับเงิน</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel">
+                <div class="card-title mb-4">สรุปงาน</div>
+
+                <div class="summary-box">
+                    <div class="summary-row border-top">
+                        <span>ค่าแรง</span>
+                        <span class="font-bold">฿450</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>อุปกรณ์ + เดินทาง</span>
+                        <span class="font-bold">฿200</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>ค่าคอมมิชชัน 15% ของค่าแรง</span>
+                        <span class="font-bold">-฿67.50</span>
+                    </div>
+
+                    <div class="summary-total-row">
+                        <span>คุณจะได้รับ</span>
+                        <span class="total-amount">฿582.50</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="showSubmitAlert()">ส่งงานและรับเงิน</button>
+                    <a href="./earnandwithd.html" class="btn-outline">ดูรายได้</a>
+                </div>
+
+                <div id="submitAlert" class="alert-box hide">
+                    <span class="font-bold">ส่งงานแล้ว</span> ลูกค้าจะได้รับแจ้งให้ชำระเงินและรีวิว
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showSubmitAlert() {
+            document.getElementById('submitAlert').classList.remove('hide');
+        }
+    </script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

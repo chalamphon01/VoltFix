@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFix - Promotion</title>
+
+    <link rel="stylesheet" href="css/promotion.css">
+    <link rel="stylesheet" href="css/admin_theme.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="wrap">
+
+            <div class="left">
+
+                <a class="logo" href="./dashboard.html">
+                    <div class="logo-icon"><i data-lucide="zap" class="light"></i></div>
+                    <span class="voltfix-text">VoltFix</span>
+                    <span class="admin-text">แอดมิน</span>
+                </a>
+
+                <nav class="menu">
+                    <a href="./dashboard.html">ภาพรวม</a>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ผู้ใช้งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./mange-user.html">จัดการผู้ใช้</a>
+                            <a href="./approve-electrician.html">อนุมัติช่าง KYC</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">งาน</button>
+                        <div class="dropdown-menu">
+                            <a href="./follow-work.html">ติดตามงาน</a>
+                            <a href="./disputes.html">จัดการข้อพิพาท</a>
+                            <a href="./chat-history.html">ประวัติแชท</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">การเงิน</button>
+                        <div class="dropdown-menu">
+                            <a href="./finance.html">การเงินและค่าคอมมิชชั่น</a>
+                            <a href="./promotion.html">โปรโมชั่นและคูปอง</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">ตั้งค่าระบบ</button>
+                        <div class="dropdown-menu">
+                            <a href="./categories.html">หมวดหมู่บริการ</a>
+                            <a href="./annoucements.html">ประกาศและแจ้งเตือน</a>
+                            <a href="./logs.html">ปรวัติการใช้งาน</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="right">
+
+                <div class="notification">
+                      <a href="./notifications.html">
+                        <i class="fa-regular fa-bell bell"></i>
+                        <div class="dot-border">
+                            <span class="badge-dot"></span>
+                        </div>
+                    </a>
+                </div>
+
+            <div class="account">
+                <button type="button" class="profile">A</button>
+                <div class="dropdown-profile">
+                    <p>Admin System</p>
+                    <a href="../Login/VoltFix%20-%20Login/admin-login.html" class="logout">ออกจากระบบ</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="wrap">
+
+            <div class="page-title">
+                <h1>โปรโมชั่นและคูปอง</h1>
+                <p class="subtitle">สร้างและจัดการคูปองส่วนลดสำหรับลูกค้า</p>
+            </div>
+
+            <div class="promo-grid">
+
+                <div class="card form-card">
+                    <h2>สร้างคูปองใหม่</h2>
+
+                    <form class="coupon-form">
+                        <div class="form-group">
+                            <label for="promo-name">ชื่อโปรโมชั่น</label>
+                            <input type="text" id="promo-name" placeholder="เช่น ลด ฿50 งานแรก">
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="promo-code">รหัสคูปอง</label>
+                                <input type="text" id="promo-code" placeholder="เช่น NEW50">
+                            </div>
+                            <div class="form-group">
+                                <label for="promo-discount">มูลค่าส่วนลด (฿)</label>
+                                <input type="number" id="promo-discount" placeholder="50">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="promo-condition">เงื่อนไขการใช้</label>
+                            <input type="text" id="promo-condition" placeholder="เช่น ลูกค้าใหม่เท่านั้น">
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="start-date">วันเริ่ม</label>
+                                <input type="date" id="start-date">
+                            </div>
+                            <div class="form-group">
+                                <label for="end-date">วันหมดอายุ</label>
+                                <input type="date" id="end-date">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-create">สร้างคูปอง</button>
+                    </form>
+                </div>
+
+                <div class="card stats-card">
+                    <h2>สถิติการใช้คูปอง</h2>
+
+                    <div class="stats-list">
+                        <div class="stats-item">
+                            <span>คูปองที่ใช้งานอยู่</span>
+                            <b>2 รายการ</b>
+                        </div>
+                        <div class="stats-item">
+                            <span>ใช้ไปแล้วเดือนนี้</span>
+                            <b>486 ครั้ง</b>
+                        </div>
+                        <div class="stats-item">
+                            <span>ส่วนลดรวมเดือนนี้</span>
+                            <b>฿24,300</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coupon-list-section">
+                <h2 class="section-title">คูปองทั้งหมด</h2>
+                <div class="table-card">
+
+                    <table class="coupon-table">
+                        <thead>
+                            <tr>
+                                <th>ชื่อ</th>
+                                <th>รหัส</th>
+                                <th>เงื่อนไข</th>
+                                <th>ระยะเวลา</th>
+                                <th>สถานะ</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="coupon-title">ลด ฿100 ค่าอุปกรณ์</td>
+                                <td class="coupon-code">VOLT100</td>
+                                <td>ร้านอุปกรณ์ไฟฟ้า ขั้นต่ำ ฿300</td>
+                                <td>ถึงสิ้นเดือนนี้</td>
+                                <td><span class="badge badge-active">เปิดใช้งาน</span></td>
+                                <td class="action"><button type="button" class="btn-edit">แก้ไข</button></td>
+                            </tr>
+                            <tr>
+                                <td class="coupon-title">ลดค่าแรง 10%</td>
+                                <td class="coupon-code">FIX10</td>
+                                <td>จองช่างครั้งแรก</td>
+                                <td>ใช้ได้ 30 วันหลังสมัคร</td>
+                                <td><span class="badge badge-active">เปิดใช้งาน</span></td>
+                                <td class="action"><button type="button" class="btn-edit">แก้ไข</button></td>
+                            </tr>
+                            <tr>
+                                <td class="coupon-title">ลด ฿50 งานฉุกเฉิน</td>
+                                <td class="coupon-code">SOS50</td>
+                                <td>บริการเรียกช่างด่วน</td>
+                                <td>หมดอายุแล้ว</td>
+                                <td><span class="badge badge-expired">ปิดใช้งาน</span></td>
+                                <td class="action"><button type="button" class="btn-edit">แก้ไข</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown-helper.js"></script>
+</body>
+
+</html>

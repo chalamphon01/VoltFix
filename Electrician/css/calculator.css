@@ -1,0 +1,451 @@
+/* ==========================================================================
+   VoltFix - Electrical Sizing Calculator & Quotation Suite Stylesheet
+   วิชา: SC362201 Web Application Track | กลุ่ม IT13
+   ผู้พัฒนา: นายชลัมพล พากุล (683380038-0)
+   ========================================================================== */
+
+.hide,
+input[type="checkbox"].hide,
+input[type="radio"].hide {
+    display: none !important;
+}
+
+.calc-container {
+    max-width: 1140px;
+    margin: 32px auto;
+    padding: 0 20px 80px 20px;
+}
+
+.calc-header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.calc-badge {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.calc-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.calc-title span {
+    color: #FBBF24;
+}
+
+.calc-subtitle {
+    color: #94A3B8;
+    font-size: 15px;
+    max-width: 780px;
+    line-height: 1.6;
+}
+
+/* Preset Buttons */
+.preset-section {
+    margin-bottom: 24px;
+}
+
+.preset-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.preset-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn-preset {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-preset:hover {
+    background: #FFFBEB;
+    border-color: #F59E0B;
+    color: #B45309;
+    transform: translateY(-1px);
+}
+
+/* 2-Column Layout */
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.calc-panel {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.panel-head {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #CBD5E1;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #0F172A;
+    background: #F8FAFC;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #D97706;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.phase-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.phase-btn {
+    border: 1.5px solid #CBD5E1;
+    background: #F8FAFC;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    color: #475569;
+    transition: all 0.2s;
+}
+
+.phase-btn.active {
+    border-color: #D97706;
+    background: #FFFBEB;
+    color: #B45309;
+}
+
+/* Result Cards */
+.result-box-highlight {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 1.5px solid #FDE68A;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.result-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.stat-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #64748B;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0F172A;
+}
+
+.stat-value.highlight {
+    color: #D97706;
+}
+
+/* Voltage Drop Badge */
+.vdrop-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.vdrop-ok {
+    background: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
+}
+
+.vdrop-warn {
+    background: #FEF2F2;
+    color: #DC2626;
+    border: 1px solid #FECACA;
+}
+
+/* Dynamic Quotation Table */
+.quote-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+}
+
+.quote-dynamic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.quote-dynamic-table th {
+    background: #F8FAFC;
+    color: #475569;
+    padding: 10px 12px;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 1.5px solid #E2E8F0;
+}
+
+.quote-dynamic-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+}
+
+.qty-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #F1F5F9;
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.qty-btn {
+    width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.qty-num {
+    padding: 0 6px;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
+}
+
+.btn-del-item {
+    background: transparent;
+    border: none;
+    color: #EF4444;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.btn-del-item:hover {
+    color: #B91C1C;
+}
+
+/* Custom Item Inputs */
+.add-custom-box {
+    background: #F8FAFC;
+    border: 1px dashed #CBD5E1;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 20px;
+}
+
+.add-custom-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn-add-item {
+    background: #0F172A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.btn-add-item:hover {
+    background: #1E293B;
+}
+
+/* Signature Pad Canvas */
+.sig-canvas-container {
+    background: #FFFFFF;
+    border: 1.5px dashed #CBD5E1;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.sig-canvas {
+    width: 100%;
+    height: 140px;
+    touch-action: none;
+    cursor: crosshair;
+    background: #FAFAFA;
+    border-radius: 8px;
+}
+
+.sig-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.btn-sig-clear {
+    background: #F1F5F9;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+}
+
+.btn-sig-clear:hover {
+    background: #E2E8F0;
+    color: #0F172A;
+}
+
+/* Action Buttons */
+.calc-action-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.btn-calc-inject {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: 700;
+    font-size: 14.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+    transition: all 0.2s;
+}
+
+.btn-calc-inject:hover {
+    background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+    transform: translateY(-2px);
+}
+
+.btn-calc-print {
+    background: #0F172A;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 14.5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-calc-print:hover {
+    background: #1E293B;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+    .add-custom-row {
+        grid-template-columns: 1fr;
+    }
+}

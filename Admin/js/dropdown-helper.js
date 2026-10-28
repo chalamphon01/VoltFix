@@ -11,6 +11,7 @@
         const containers = document.querySelectorAll(DROPDOWN_SELECTORS.join(', '));
         if (!containers.length) return;
 
+        const MOBILE_QUERY = window.matchMedia('(max-width: 1023px)');
         const timers = new WeakMap();
 
         function clearCloseTimer(el) {
@@ -45,6 +46,9 @@
             );
 
             container.addEventListener('mouseenter', function () {
+                // On mobile/tablet, navbar.js handles .menu accordions
+                if (container.closest('.menu') && MOBILE_QUERY.matches) return;
+
                 clearCloseTimer(container);
                 let parent = container.parentElement;
                 while (parent) {
@@ -58,6 +62,8 @@
             });
 
             container.addEventListener('mouseleave', function () {
+                if (container.closest('.menu') && MOBILE_QUERY.matches) return;
+
                 if (container.dataset.clickedOpen === 'true') {
                     return;
                 }
@@ -68,6 +74,9 @@
 
             if (trigger) {
                 trigger.addEventListener('click', function (e) {
+                    // On mobile/tablet, navbar.js handles .menu accordions
+                    if (container.closest('.menu') && MOBILE_QUERY.matches) return;
+
                     const href = trigger.getAttribute('href');
                     const isHashOrEmpty = !href || href === '#' || href.startsWith('javascript:');
 

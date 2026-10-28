@@ -1,75 +1,162 @@
+/**
+ * VoltFix Admin - Responsive Navigation & Hamburger System
+ * Supports Mobile (< 768px), Tablet (768px - 1023px), and Desktop (>= 1024px)
+ */
 document.addEventListener('DOMContentLoaded', function () {
-    const navMenus = document.querySelectorAll('.menu');
-    if (!navMenus.length) return;
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    const menu = header.querySelector('.menu');
+    if (!menu) return;
+
+    const rightContainer = header.querySelector('.right');
+    const wrapContainer = header.querySelector('.wrap');
+
+    // 1. Ensure Hamburger Button exists in .right
+    let toggleBtn = header.querySelector('.hamburger-btn, .nav-toggle');
+    if (!toggleBtn && rightContainer) {
+        toggleBtn = document.createElement('button');
+        toggleBtn.type = 'button';
+        toggleBtn.className = 'hamburger-btn';
+        toggleBtn.id = 'adminNavToggle';
+        toggleBtn.setAttribute('aria-label', 'เมนูหลัก');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.innerHTML = '<span class="bar"></span><span class="bar"></span><span class="bar"></span>';
+        rightContainer.appendChild(toggleBtn);
+    }
+
+    // 2. Ensure Backdrop Overlay exists in header
+    let backdrop = header.querySelector('.nav-overlay');
+    if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.className = 'nav-overlay';
+        backdrop.id = 'adminNavOverlay';
+        header.appendChild(backdrop);
+    }
 
     const MOBILE_QUERY = window.matchMedia('(max-width: 1023px)');
 
-    navMenus.forEach(function (menu) {
-        const hamburgerArea = function (event) {
-            if (!MOBILE_QUERY.matches) return false;
+    function isMobileOrTablet() {
+        return MOBILE_QUERY.matches;
+    }
 
-            const rect = menu.getBoundingClientRect();
-            const header = menu.closest('header');
-            if (!header) return false;
-            const headerRect = header.getBoundingClientRect();
+    function openMobileMenu() {
+        menu.classList.add('nav-open');
+        header.classList.add('is-nav-open');
+        document.body.classList.add('admin-menu-open');
+        if (toggleBtn) {
+            toggleBtn.classList.add('active');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+        }
+        if (backdrop) {
+            backdrop.classList.add('active');
+        }
+    }
 
-            const x = event.clientX;
-            const y = event.clientY;
-            return (
-                x >= headerRect.right - 64 &&
-                x <= headerRect.right &&
-                y >= headerRect.top &&
-                y <= headerRect.bottom
-            );
-        };
+    function closeMobileMenu() {
+        menu.classList.remove('nav-open');
+        header.classList.remove('is-nav-open');
+        document.body.classList.remove('admin-menu-open');
+        if (toggleBtn) {
+            toggleBtn.classList.remove('active');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+        if (backdrop) {
+            backdrop.classList.remove('active');
+        }
 
-        menu.addEventListener('click', function (event) {
-            if (!MOBILE_QUERY.matches) return;
+        // Close any open submenus in mobile menu
+        menu.querySelectorAll('.dropdown.submenu-open').forEach(function (d) {
+            d.classList.remove('submenu-open');
+        });
+    }
 
-            const target = event.target;
-            const dropdownButton = target.closest('.dropdown-btn');
-            const submenuLink = target.closest('.dropdown-menu a');
-            const normalLink = target.closest(':scope > a');
+    function toggleMobileMenu() {
+        if (menu.classList.contains('nav-open')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
 
-            if (hamburgerArea(event)) {
-                event.preventDefault();
-                event.stopPropagation();
-                const isOpen = menu.classList.toggle('nav-open');
-                if (!isOpen) {
-                    menu.querySelectorAll('.dropdown.submenu-open').forEach(function (dropdown) {
-                        dropdown.classList.remove('submenu-open');
-                    });
+    // Hamburger button toggle click
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+
+    // Backdrop overlay click to close
+    if (backdrop) {
+        backdrop.addEventListener('click', function (e) {
+            e.preventDefault();
+            closeMobileMenu();
+        });
+    }
+
+    // Mobile menu inside click handling
+    menu.addEventListener('click', function (event) {
+        if (!isMobileOrTablet()) return;
+
+        const target = event.target;
+        const dropdownButton = target.closest('.dropdown-btn');
+        const link = target.closest('a');
+
+        // Dropdown accordion toggle
+        if (dropdownButton) {
+            event.preventDefault();
+            event.stopPropagation();
+            const currentDropdown = dropdownButton.closest('.dropdown');
+            if (currentDropdown) {
+                const wasOpen = currentDropdown.classList.contains('submenu-open');
+                
+                // Accordion behavior: close other open dropdowns in .menu
+                menu.querySelectorAll('.dropdown.submenu-open').forEach(function (d) {
+                    if (d !== currentDropdown) {
+                        d.classList.remove('submenu-open');
+                    }
+                });
+
+                if (wasOpen) {
+                    currentDropdown.classList.remove('submenu-open');
+                } else {
+                    currentDropdown.classList.add('submenu-open');
                 }
-                return;
             }
+            return;
+        }
 
-            if (submenuLink || normalLink) return;
+        // Direct links: allow navigation and close mobile menu
+        if (link) {
+            closeMobileMenu();
+        }
+    });
 
-            if (dropdownButton) {
-                event.preventDefault();
-                event.stopPropagation();
-                const dropdown = dropdownButton.closest('.dropdown');
-                if (dropdown) dropdown.classList.toggle('submenu-open');
-            }
-        });
+    // Close on click outside
+    document.addEventListener('click', function (event) {
+        if (!isMobileOrTablet()) return;
+        if (!menu.classList.contains('nav-open')) return;
 
-        document.addEventListener('click', function (event) {
-            if (!MOBILE_QUERY.matches) return;
-            if (menu.contains(event.target)) return;
-            if (hamburgerArea(event)) return;
+        // If click is outside header, close
+        if (!header.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
 
-            menu.classList.remove('nav-open');
-            menu.querySelectorAll('.dropdown.submenu-open').forEach(function (dropdown) {
-                dropdown.classList.remove('submenu-open');
-            });
-        });
+    // Close on Escape key press
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && menu.classList.contains('nav-open')) {
+            closeMobileMenu();
+            if (toggleBtn) toggleBtn.focus();
+        }
+    });
 
-        document.addEventListener('keydown', function (event) {
-            if (event.key !== 'Escape' || !MOBILE_QUERY.matches) return;
-            menu.classList.remove('nav-open');
-            menu.querySelectorAll('.dropdown.submenu-open').forEach(function (dropdown) {
-                dropdown.classList.remove('submenu-open');
-            });
-        });
+    // Reset when resizing window to desktop
+    window.addEventListener('resize', function () {
+        if (!isMobileOrTablet() && menu.classList.contains('nav-open')) {
+            closeMobileMenu();
+        }
     });
 });
